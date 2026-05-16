@@ -1,0 +1,15 @@
+F:\.Net\GameSep\Course_Project\Game.DAL\bin\Debug\net10.0\Game.DAL.deps.json
+F:\.Net\GameSep\Course_Project\Game.DAL\bin\Debug\net10.0\Game.DAL.dll
+F:\.Net\GameSep\Course_Project\Game.DAL\bin\Debug\net10.0\Game.DAL.pdb
+F:\.Net\GameSep\Course_Project\Game.DAL\obj\Debug\net10.0\Game.DAL.GeneratedMSBuildEditorConfig.editorconfig
+F:\.Net\GameSep\Course_Project\Game.DAL\obj\Debug\net10.0\Game.DAL.AssemblyInfoInputs.cache
+F:\.Net\GameSep\Course_Project\Game.DAL\obj\Debug\net10.0\Game.DAL.AssemblyInfo.cs
+F:\.Net\GameSep\Course_Project\Game.DAL\obj\Debug\net10.0\Game.DAL.csproj.CoreCompileInputs.cache
+F:\.Net\GameSep\Course_Project\Game.DAL\obj\Debug\net10.0\Game.DAL.sourcelink.json
+F:\.Net\GameSep\Course_Project\Game.DAL\obj\Debug\net10.0\Game.DAL.dll
+F:\.Net\GameSep\Course_Project\Game.DAL\obj\Debug\net10.0\refint\Game.DAL.dll
+F:\.Net\GameSep\Course_Project\Game.DAL\obj\Debug\net10.0\Game.DAL.pdb
+F:\.Net\GameSep\Course_Project\Game.DAL\obj\Debug\net10.0\ref\Game.DAL.dll
+F:\.Net\GameSep\Course_Project\Game.DAL\bin\Debug\net10.0\Game.DAL.runtimeconfig.json
+F:\.Net\GameSep\Course_Project\Game.DAL\obj\Debug\net10.0\Game.DAL.csproj.AssemblyReference.cache
+F:\.Net\GameSep\Course_Project\Game.DAL\obj\Debug\net10.0\Game.DAL.genruntimeconfig.cache
