@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="GameSP.BLL/GameSP.BLL.csproj" />
+  <Project Path="GameSP.DAL/GameSP.DAL.csproj" />
+  <Project Path="GameSP.Entities/GameSP.Entities.csproj" />
+  <Project Path="GameSP.Web/GameSP.Web.csproj" />
+</Solution>
