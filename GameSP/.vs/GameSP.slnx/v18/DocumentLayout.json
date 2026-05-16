@@ -3,24 +3,36 @@
   "WorkspaceRootPath": "F:\\.Net\\GameSep\\Course_Project\\GameSP\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9C437F18-B355-4F4A-9F52-DDB6D6CD8F05}|GameSP.DAL\\GameSP.DAL.csproj|f:\\.net\\gamesep\\course_project\\gamesp\\gamesp.dal\\gamesp.dal.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{9C437F18-B355-4F4A-9F52-DDB6D6CD8F05}|GameSP.DAL\\GameSP.DAL.csproj|solutionrelative:gamesp.dal\\gamesp.dal.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{A7E04563-FC91-2913-28B5-1D12249A5760}|GameSP.DAL\\GameSP.DAL.csproj|f:\\.net\\gamesep\\course_project\\gamesp\\gamesp.dal\\gamesp.dal.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{A7E04563-FC91-2913-28B5-1D12249A5760}|GameSP.DAL\\GameSP.DAL.csproj|solutionrelative:gamesp.dal\\gamesp.dal.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EF37F015-747B-41E2-9EA3-0AF69691A178}|GameSP.Web\\GameSP.Web.csproj|f:\\.net\\gamesep\\course_project\\gamesp\\gamesp.web\\gamesp.web.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{EF37F015-747B-41E2-9EA3-0AF69691A178}|GameSP.Web\\GameSP.Web.csproj|solutionrelative:gamesp.web\\gamesp.web.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{B1870000-34D0-0064-3656-9C0F6D0AB763}|GameSP.Web\\GameSP.Web.csproj|f:\\.net\\gamesep\\course_project\\gamesp\\gamesp.web\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{B1870000-34D0-0064-3656-9C0F6D0AB763}|GameSP.Web\\GameSP.Web.csproj|solutionrelative:gamesp.web\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{854B48A2-29EA-472A-8606-6320EB49D0AB}|GameSP.Entities\\GameSP.Entities.csproj|f:\\.net\\gamesep\\course_project\\gamesp\\gamesp.entities\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{854B48A2-29EA-472A-8606-6320EB49D0AB}|GameSP.Entities\\GameSP.Entities.csproj|solutionrelative:gamesp.entities\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1CD042F2-FF54-7482-A3A8-088C8248C44C}|GameSP.Entities\\GameSP.Entities.csproj|f:\\.net\\gamesep\\course_project\\gamesp\\gamesp.entities\\gamesp.entities.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{1CD042F2-FF54-7482-A3A8-088C8248C44C}|GameSP.Entities\\GameSP.Entities.csproj|solutionrelative:gamesp.entities\\gamesp.entities.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9C437F18-B355-4F4A-9F52-DDB6D6CD8F05}|GameSP.DAL\\GameSP.DAL.csproj|f:\\.net\\gamesep\\course_project\\gamesp\\gamesp.dal\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9C437F18-B355-4F4A-9F52-DDB6D6CD8F05}|GameSP.DAL\\GameSP.DAL.csproj|solutionrelative:gamesp.dal\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B1870000-34D0-0064-3656-9C0F6D0AB763}|GameSP.Web\\GameSP.Web.csproj|f:\\.net\\gamesep\\course_project\\gamesp\\gamesp.web\\gamesp.web.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{B1870000-34D0-0064-3656-9C0F6D0AB763}|GameSP.Web\\GameSP.Web.csproj|solutionrelative:gamesp.web\\gamesp.web.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{57A2C39A-ED00-4465-95E0-10F7C0D085F2}|GameSP.BLL\\GameSP.BLL.csproj|f:\\.net\\gamesep\\course_project\\gamesp\\gamesp.bll\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{57A2C39A-ED00-4465-95E0-10F7C0D085F2}|GameSP.BLL\\GameSP.BLL.csproj|solutionrelative:gamesp.bll\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A1AFB74E-833F-9C16-C81B-A27DDC8DA59D}|GameSP.BLL\\GameSP.BLL.csproj|f:\\.net\\gamesep\\course_project\\gamesp\\gamesp.bll\\gamesp.bll.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{A1AFB74E-833F-9C16-C81B-A27DDC8DA59D}|GameSP.BLL\\GameSP.BLL.csproj|solutionrelative:gamesp.bll\\gamesp.bll.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1CD042F2-FF54-7482-A3A8-088C8248C44C}|GameSP.Entities\\GameSP.Entities.csproj|f:\\.net\\gamesep\\course_project\\gamesp\\gamesp.entities\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1CD042F2-FF54-7482-A3A8-088C8248C44C}|GameSP.Entities\\GameSP.Entities.csproj|solutionrelative:gamesp.entities\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7E04563-FC91-2913-28B5-1D12249A5760}|GameSP.DAL\\GameSP.DAL.csproj|f:\\.net\\gamesep\\course_project\\gamesp\\gamesp.dal\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7E04563-FC91-2913-28B5-1D12249A5760}|GameSP.DAL\\GameSP.DAL.csproj|solutionrelative:gamesp.dal\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1AFB74E-833F-9C16-C81B-A27DDC8DA59D}|GameSP.BLL\\GameSP.BLL.csproj|f:\\.net\\gamesep\\course_project\\gamesp\\gamesp.bll\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1AFB74E-833F-9C16-C81B-A27DDC8DA59D}|GameSP.BLL\\GameSP.BLL.csproj|solutionrelative:gamesp.bll\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,25 +42,64 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "F:\\.Net\\GameSep\\Course_Project\\GameSP\\GameSP.Web\\appsettings.json",
+              "RelativeDocumentMoniker": "GameSP.Web\\appsettings.json",
+              "ToolTip": "F:\\.Net\\GameSep\\Course_Project\\GameSP\\GameSP.Web\\appsettings.json",
+              "RelativeToolTip": "GameSP.Web\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-05-16T19:24:34.592Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "GameSP.Entities",
+              "DocumentMoniker": "F:\\.Net\\GameSep\\Course_Project\\GameSP\\GameSP.Entities\\GameSP.Entities.csproj",
+              "RelativeDocumentMoniker": "GameSP.Entities\\GameSP.Entities.csproj",
+              "ToolTip": "F:\\.Net\\GameSep\\Course_Project\\GameSP\\GameSP.Entities\\GameSP.Entities.csproj",
+              "RelativeToolTip": "GameSP.Entities\\GameSP.Entities.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-05-16T18:33:34.31Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "GameSP.BLL",
+              "DocumentMoniker": "F:\\.Net\\GameSep\\Course_Project\\GameSP\\GameSP.BLL\\GameSP.BLL.csproj",
+              "RelativeDocumentMoniker": "GameSP.BLL\\GameSP.BLL.csproj",
+              "ToolTip": "F:\\.Net\\GameSep\\Course_Project\\GameSP\\GameSP.BLL\\GameSP.BLL.csproj",
+              "RelativeToolTip": "GameSP.BLL\\GameSP.BLL.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-05-16T18:31:30.85Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "GameSP.DAL",
+              "Title": "GameSP.DAL.csproj",
               "DocumentMoniker": "F:\\.Net\\GameSep\\Course_Project\\GameSP\\GameSP.DAL\\GameSP.DAL.csproj",
               "RelativeDocumentMoniker": "GameSP.DAL\\GameSP.DAL.csproj",
               "ToolTip": "F:\\.Net\\GameSep\\Course_Project\\GameSP\\GameSP.DAL\\GameSP.DAL.csproj",
               "RelativeToolTip": "GameSP.DAL\\GameSP.DAL.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
               "WhenOpened": "2026-05-16T18:27:57.893Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "GameSP.Web",
+              "DocumentIndex": 3,
+              "Title": "GameSP.Web.csproj",
               "DocumentMoniker": "F:\\.Net\\GameSep\\Course_Project\\GameSP\\GameSP.Web\\GameSP.Web.csproj",
               "RelativeDocumentMoniker": "GameSP.Web\\GameSP.Web.csproj",
               "ToolTip": "F:\\.Net\\GameSep\\Course_Project\\GameSP\\GameSP.Web\\GameSP.Web.csproj",
@@ -60,7 +111,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "Class1.cs",
               "DocumentMoniker": "F:\\.Net\\GameSep\\Course_Project\\GameSP\\GameSP.Entities\\Class1.cs",
               "RelativeDocumentMoniker": "GameSP.Entities\\Class1.cs",
@@ -73,7 +124,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "Class1.cs",
               "DocumentMoniker": "F:\\.Net\\GameSep\\Course_Project\\GameSP\\GameSP.DAL\\Class1.cs",
               "RelativeDocumentMoniker": "GameSP.DAL\\Class1.cs",
@@ -86,7 +137,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "Class1.cs",
               "DocumentMoniker": "F:\\.Net\\GameSep\\Course_Project\\GameSP\\GameSP.BLL\\Class1.cs",
               "RelativeDocumentMoniker": "GameSP.BLL\\Class1.cs",

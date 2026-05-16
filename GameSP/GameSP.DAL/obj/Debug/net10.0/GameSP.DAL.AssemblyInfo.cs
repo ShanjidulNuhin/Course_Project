@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GameSP.DAL")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+508292bab6ffbf0f0701aea73ff63b507abfdf0e")]
 [assembly: System.Reflection.AssemblyProductAttribute("GameSP.DAL")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GameSP.DAL")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

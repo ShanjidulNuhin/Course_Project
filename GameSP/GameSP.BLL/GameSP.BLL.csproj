@@ -11,4 +11,9 @@
     <ProjectReference Include="..\GameSP.Entities\GameSP.Entities.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Interfaces\" />
+    <Folder Include="Services\" />
+  </ItemGroup>
+
 </Project>
