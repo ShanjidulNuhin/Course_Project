@@ -3,6 +3,11 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
+builder.Services.AddScoped<Game.DAL.Repos.GameRepository>();
+builder.Services.AddScoped<Game.BLL.Services.GameService>();
+
+builder.Services.AddDbContext<Game.DAL.EF.GameSpdbContext>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
