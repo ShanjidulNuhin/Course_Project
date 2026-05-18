@@ -1,8 +1,59 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@model IEnumerable<Game.BLL.DTOs.GameDTO>
+
+@{
+    ViewData["Title"] = "Welcome to GameSP";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="container mt-5">
+    <div class="jumbotron text-center bg-light p-5 rounded mb-5 shadow-sm">
+        <h1 class="display-4 fw-bold text-primary">Welcome to GameSP!</h1>
+        <p class="lead text-secondary">Explore and purchase your favorite games or save them to your wishlist.</p>
+        <hr class="my-4">
+        <p>Join our community today to access your ultimate gaming library.</p>
+    </div>
+
+    <h2 class="mb-4 text-secondary fw-bold">Available Games</h2>
+
+    @if (Model == null || !Model.Any())
+    {
+        <div class="alert alert-info text-center p-5 rounded shadow-sm" role="alert">
+            <h4 class="alert-heading fw-bold">No games available right now!</h4>
+            <p class="mb-0 text-muted">Please check back later. Admin hasn't added any games to the store yet.</p>
+        </div>
+    }
+    else
+    {
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            @foreach (var game in Model)
+            {
+                <div class="col">
+                    <div class="card h-100 shadow-sm border-0">
+
+                        @if (game.Cover != null && game.Cover.Length > 0)
+                        {
+                            var base64 = Convert.ToBase64String(game.Cover);
+                            var imgSrc = $"data:image/jpeg;base64,{base64}";
+                            <img src="@imgSrc" class="card-img-top rounded-top" alt="@game.Title" style="height: 250px; object-fit: cover;" />
+                        }
+                        else
+                        {
+                            <img src="https://via.placeholder.com/300x250?text=No+Game+Cover" class="card-img-top rounded-top" alt="No Image" style="height: 250px; object-fit: cover;" />
+                        }
+
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold text-dark mb-1">@game.Title</h5>
+                            <span class="badge bg-secondary mb-3">@game.Genre</span>
+                            <p class="card-text text-muted" style="font-size: 0.9rem; line-height: 1.4;">
+                                @(game.Description?.Length > 100 ? game.Description.Substring(0, 100) + "..." : game.Description)
+                            </p>
+                        </div>
+                        <div class="card-footer bg-white border-top-0 d-flex justify-content-between align-items-center pb-3">
+                            <span class="fs-5 fw-bold text-success">$@game.Price</span>
+                            <a asp-controller="Auth" asp-action="Login" class="btn btn-sm btn-outline-primary px-3 rounded-pill">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    }
 </div>
