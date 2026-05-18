@@ -1,14 +1,22 @@
 using App.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
+using Game.BLL.Services;
+using System;
 
 namespace App.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly GameService _gameService;
+        public HomeController(GameService gameService)
+        {
+            _gameService = gameService;
+        }
         public IActionResult Index()
         {
-            return View();
+            var games = _gameService.GetGamesForLandingPage();
+            return View(games);
         }
 
         public IActionResult Privacy()
