@@ -5,6 +5,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
+using GameClass = Game.DAL.EF.Tables.Game;
+
 namespace Game.DAL.Repos
 {
     public class GameRepository
@@ -13,32 +15,31 @@ namespace Game.DAL.Repos
 
         public GameRepository(GameSpdbContext db)
         {
-            
             this.db = db;
         }
 
-        public bool Create(Game g)
+        public bool Create(GameClass g)
         {
             db.Games.Add(g);
             return db.SaveChanges() > 0;
         }
 
-        public List<Game> Get()
+        public List<GameClass> Get()
         {
             return db.Games
-                     .Include(g => g.Category)
-                     .Where(g => g.IsActive)
+                     .Include(g => g.Genre)
+                     //.Where(g => g.IsActive)
                      .ToList();
         }
 
-        public Game? Get(int id)
+        public GameClass? Get(int id)
         {
             return db.Games
-                     .Include(g => g.Category)
+                     .Include(g => g.Genre)
                      .FirstOrDefault(g => g.Id == id);
         }
 
-        public bool Update(Game g)
+        public bool Update(GameClass g)
         {
             var exobj = Get(g.Id);
 
@@ -58,7 +59,7 @@ namespace Game.DAL.Repos
             {
                 return false;
             }
-            exobj.IsActive = false;
+            //exobj.IsActive = false;
             return db.SaveChanges() > 0;
         }
     }

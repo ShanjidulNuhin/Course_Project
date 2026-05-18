@@ -1,0 +1,12 @@
+F:\.Net\GameSep\Course_Project\Game.BLL\bin\Debug\net10.0\Game.BLL.deps.json
+F:\.Net\GameSep\Course_Project\Game.BLL\bin\Debug\net10.0\Game.BLL.dll
+F:\.Net\GameSep\Course_Project\Game.BLL\bin\Debug\net10.0\Game.BLL.pdb
+F:\.Net\GameSep\Course_Project\Game.BLL\obj\Debug\net10.0\Game.BLL.GeneratedMSBuildEditorConfig.editorconfig
+F:\.Net\GameSep\Course_Project\Game.BLL\obj\Debug\net10.0\Game.BLL.AssemblyInfoInputs.cache
+F:\.Net\GameSep\Course_Project\Game.BLL\obj\Debug\net10.0\Game.BLL.AssemblyInfo.cs
+F:\.Net\GameSep\Course_Project\Game.BLL\obj\Debug\net10.0\Game.BLL.csproj.CoreCompileInputs.cache
+F:\.Net\GameSep\Course_Project\Game.BLL\obj\Debug\net10.0\Game.BLL.sourcelink.json
+F:\.Net\GameSep\Course_Project\Game.BLL\obj\Debug\net10.0\Game.BLL.dll
+F:\.Net\GameSep\Course_Project\Game.BLL\obj\Debug\net10.0\refint\Game.BLL.dll
+F:\.Net\GameSep\Course_Project\Game.BLL\obj\Debug\net10.0\Game.BLL.pdb
+F:\.Net\GameSep\Course_Project\Game.BLL\obj\Debug\net10.0\ref\Game.BLL.dll
