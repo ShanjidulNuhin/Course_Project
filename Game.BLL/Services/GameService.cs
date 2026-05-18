@@ -29,8 +29,9 @@ namespace Game.BLL.Services
                 Id = g.Id,
                 Title = g.Title,
                 Genre = g.Genre,
-                Price = g.Price,
-                Description = g.Description
+                Cover = g.Cover,
+                Description = g.Description,
+                Price = g.Price
                 // আপনার Game টেবিলে Cover না থাকায় 'Cover = g.Cover' লাইনটি বাদ দেওয়া হয়েছে
             }).ToList();
 
