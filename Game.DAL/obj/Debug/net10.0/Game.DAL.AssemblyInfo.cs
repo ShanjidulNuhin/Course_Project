@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Game.DAL")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+21ee1f1ad83cdc8f5a9f37dc811952987f8a077a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9783c37a21b22b9ef27ab2cfbf62dffe8025222f")]
 [assembly: System.Reflection.AssemblyProductAttribute("Game.DAL")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Game.DAL")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

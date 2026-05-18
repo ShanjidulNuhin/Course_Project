@@ -15,6 +15,6 @@ public partial class Library
 
     public DateOnly? OrderDate { get; set; }
 
-    public virtual User? User { get; set; }
+    public virtual User? Users { get; set; }
     public virtual Game? Game { get; set; }
 }
