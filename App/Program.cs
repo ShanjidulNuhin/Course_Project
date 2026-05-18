@@ -1,3 +1,6 @@
+using Game.BLL.Services;
+using Game.DAL.Repos;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -7,6 +10,10 @@ builder.Services.AddScoped<Game.DAL.Repos.GameRepository>();
 builder.Services.AddScoped<Game.BLL.Services.GameService>();
 
 builder.Services.AddDbContext<Game.DAL.EF.GameSpdbContext>();
+builder.Services.AddScoped<GameRepository>();
+builder.Services.AddScoped<UserRepository>();
+builder.Services.AddScoped<GameService>();
+builder.Services.AddScoped<AuthService>();
 
 var app = builder.Build();
 

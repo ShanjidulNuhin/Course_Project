@@ -3,7 +3,6 @@ using Game.DAL.Repos;
 using System.Collections.Generic;
 using System.Linq;
 
-// নেমস্পেস কনф্লিক্ট এড়াতে অ্যালিয়াস ব্যবহার করা হলো
 using GameClass = Game.DAL.EF.Tables.Game;
 
 namespace Game.BLL.Services

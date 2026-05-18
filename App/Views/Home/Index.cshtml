@@ -3,7 +3,27 @@
 @{
     ViewData["Title"] = "Welcome to GameSP";
 }
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+<div class="container">
+    <a class="navbar-brand fw-bold text-warning" asp-controller="Home" asp-action="Index">
+        🎮 GameSP
+    </a>
 
+    <div class="ms-auto">
+        <a asp-controller="Auth"
+           asp-action="Login"
+           class="btn btn-outline-light me-2 rounded-pill px-4">
+            Login
+        </a>
+
+        <a asp-controller="Auth"
+           asp-action="Register"
+           class="btn btn-warning rounded-pill px-4 fw-bold">
+            Register
+        </a>
+    </div>
+</div>
+</nav>
 <div class="container mt-5">
     <div class="jumbotron text-center bg-light p-5 rounded mb-5 shadow-sm">
         <h1 class="display-4 fw-bold text-primary">Welcome to GameSP!</h1>

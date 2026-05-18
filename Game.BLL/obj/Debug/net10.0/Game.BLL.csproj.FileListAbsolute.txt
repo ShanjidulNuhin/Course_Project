@@ -10,3 +10,7 @@ F:\.Net\GameSep\Course_Project\Game.BLL\obj\Debug\net10.0\Game.BLL.dll
 F:\.Net\GameSep\Course_Project\Game.BLL\obj\Debug\net10.0\refint\Game.BLL.dll
 F:\.Net\GameSep\Course_Project\Game.BLL\obj\Debug\net10.0\Game.BLL.pdb
 F:\.Net\GameSep\Course_Project\Game.BLL\obj\Debug\net10.0\ref\Game.BLL.dll
+F:\.Net\GameSep\Course_Project\Game.BLL\bin\Debug\net10.0\Game.DAL.dll
+F:\.Net\GameSep\Course_Project\Game.BLL\bin\Debug\net10.0\Game.DAL.pdb
+F:\.Net\GameSep\Course_Project\Game.BLL\obj\Debug\net10.0\Game.BLL.csproj.AssemblyReference.cache
+F:\.Net\GameSep\Course_Project\Game.BLL\obj\Debug\net10.0\Game.BLL.csproj.Up2Date

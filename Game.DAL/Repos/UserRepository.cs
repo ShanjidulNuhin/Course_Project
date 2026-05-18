@@ -20,7 +20,7 @@ namespace Game.DAL.Repos
         }
         public User? GetByToken(string token)
         {
-            return db.Users.FirstOrDefault(u => u.token == token);
+            return db.Users.FirstOrDefault(u => u.Token == token);
         }
         public bool Create(User u)
         {

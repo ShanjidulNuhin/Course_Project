@@ -1,0 +1,74 @@
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@{
+    ViewData["Title"] = "User Home";
+}
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+    <div class="container">
+
+        <a class="navbar-brand text-warning fw-bold"
+           asp-controller="User"
+           asp-action="Index">
+
+            🎮 GameSP
+
+        </a>
+
+        <div class="ms-auto d-flex align-items-center">
+            @if (!string.IsNullOrEmpty(ViewBag.UserName))
+            {
+                <span class="text-light me-3 fw-bold">Welcome, @ViewBag.UserName</span>
+            }
+
+            <a asp-controller="User"
+               asp-action="Profile"
+               class="btn btn-outline-light me-2">
+
+                Profile
+
+            </a>
+
+            <a asp-controller="User"
+               asp-action="Library"
+               class="btn btn-outline-info me-2">
+
+                Library
+
+            </a>
+
+            <a asp-controller="User"
+               asp-action="Balance"
+               class="btn btn-outline-success me-2">
+
+                Balance
+
+            </a>
+
+            <a asp-controller="Auth"
+               asp-action="Logout"
+               class="btn btn-danger">
+
+                Logout
+
+            </a>
+
+        </div>
+
+    </div>
+
+</nav>
+
+<div class="container mt-5">
+
+    <h2>Welcome to GameSP Dashboard</h2>
+
+    <p>
+        You are now logged in.
+    </p>
+
+</div>
