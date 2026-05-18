@@ -3,6 +3,42 @@
   "WorkspaceRootPath": "F:\\.Net\\GameSep\\Course_Project\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{6C0F928A-B28D-D207-D239-598F22CCD0B7}|App\\App.csproj|f:\\.net\\gamesep\\course_project\\app\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{6C0F928A-B28D-D207-D239-598F22CCD0B7}|App\\App.csproj|solutionrelative:app\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C08B8594-AF07-4A44-A866-25A5D2E630F3}|Game.BLL\\Game.BLL.csproj|f:\\.net\\gamesep\\course_project\\game.bll\\dtos\\viewordersdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C08B8594-AF07-4A44-A866-25A5D2E630F3}|Game.BLL\\Game.BLL.csproj|solutionrelative:game.bll\\dtos\\viewordersdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C08B8594-AF07-4A44-A866-25A5D2E630F3}|Game.BLL\\Game.BLL.csproj|f:\\.net\\gamesep\\course_project\\game.bll\\dtos\\ordersdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C08B8594-AF07-4A44-A866-25A5D2E630F3}|Game.BLL\\Game.BLL.csproj|solutionrelative:game.bll\\dtos\\ordersdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C08B8594-AF07-4A44-A866-25A5D2E630F3}|Game.BLL\\Game.BLL.csproj|f:\\.net\\gamesep\\course_project\\game.bll\\dtos\\gamecreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C08B8594-AF07-4A44-A866-25A5D2E630F3}|Game.BLL\\Game.BLL.csproj|solutionrelative:game.bll\\dtos\\gamecreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C08B8594-AF07-4A44-A866-25A5D2E630F3}|Game.BLL\\Game.BLL.csproj|f:\\.net\\gamesep\\course_project\\game.bll\\dtos\\gamedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C08B8594-AF07-4A44-A866-25A5D2E630F3}|Game.BLL\\Game.BLL.csproj|solutionrelative:game.bll\\dtos\\gamedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C08B8594-AF07-4A44-A866-25A5D2E630F3}|Game.BLL\\Game.BLL.csproj|f:\\.net\\gamesep\\course_project\\game.bll\\dtos\\libraryviewdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C08B8594-AF07-4A44-A866-25A5D2E630F3}|Game.BLL\\Game.BLL.csproj|solutionrelative:game.bll\\dtos\\libraryviewdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C08B8594-AF07-4A44-A866-25A5D2E630F3}|Game.BLL\\Game.BLL.csproj|f:\\.net\\gamesep\\course_project\\game.bll\\dtos\\userregisterdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C08B8594-AF07-4A44-A866-25A5D2E630F3}|Game.BLL\\Game.BLL.csproj|solutionrelative:game.bll\\dtos\\userregisterdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C08B8594-AF07-4A44-A866-25A5D2E630F3}|Game.BLL\\Game.BLL.csproj|f:\\.net\\gamesep\\course_project\\game.bll\\dtos\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C08B8594-AF07-4A44-A866-25A5D2E630F3}|Game.BLL\\Game.BLL.csproj|solutionrelative:game.bll\\dtos\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DCE70D9C-534A-4ACA-B8B8-2DD11920E5DE}|Game.DAL\\Game.DAL.csproj|f:\\.net\\gamesep\\course_project\\game.dal\\ef\\tables\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DCE70D9C-534A-4ACA-B8B8-2DD11920E5DE}|Game.DAL\\Game.DAL.csproj|solutionrelative:game.dal\\ef\\tables\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{DCE70D9C-534A-4ACA-B8B8-2DD11920E5DE}|Game.DAL\\Game.DAL.csproj|f:\\.net\\gamesep\\course_project\\game.dal\\ef\\repos\\gamerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DCE70D9C-534A-4ACA-B8B8-2DD11920E5DE}|Game.DAL\\Game.DAL.csproj|solutionrelative:game.dal\\ef\\repos\\gamerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -23,10 +59,6 @@
       "RelativeMoniker": "D:0:0:{DCE70D9C-534A-4ACA-B8B8-2DD11920E5DE}|Game.DAL\\Game.DAL.csproj|solutionrelative:game.dal\\ef\\tables\\library.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DCE70D9C-534A-4ACA-B8B8-2DD11920E5DE}|Game.DAL\\Game.DAL.csproj|f:\\.net\\gamesep\\course_project\\game.dal\\ef\\tables\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DCE70D9C-534A-4ACA-B8B8-2DD11920E5DE}|Game.DAL\\Game.DAL.csproj|solutionrelative:game.dal\\ef\\tables\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{DCE70D9C-534A-4ACA-B8B8-2DD11920E5DE}|Game.DAL\\Game.DAL.csproj|f:\\.net\\gamesep\\course_project\\game.dal\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DCE70D9C-534A-4ACA-B8B8-2DD11920E5DE}|Game.DAL\\Game.DAL.csproj|solutionrelative:game.dal\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -42,8 +74,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "F:\\.Net\\GameSep\\Course_Project\\App\\appsettings.json",
+              "RelativeDocumentMoniker": "App\\appsettings.json",
+              "ToolTip": "F:\\.Net\\GameSep\\Course_Project\\App\\appsettings.json",
+              "RelativeToolTip": "App\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-05-18T08:17:25.589Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
@@ -53,29 +98,99 @@
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{c9c0ae26-aa77-11d2-b3f0-0000f87570ee}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Order.cs",
-              "DocumentMoniker": "F:\\.Net\\GameSep\\Course_Project\\Game.DAL\\EF\\Tables\\Order.cs",
-              "RelativeDocumentMoniker": "Game.DAL\\EF\\Tables\\Order.cs",
-              "ToolTip": "F:\\.Net\\GameSep\\Course_Project\\Game.DAL\\EF\\Tables\\Order.cs",
-              "RelativeToolTip": "Game.DAL\\EF\\Tables\\Order.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "ViewOrdersDTO.cs",
+              "DocumentMoniker": "F:\\.Net\\GameSep\\Course_Project\\Game.BLL\\DTOs\\ViewOrdersDTO.cs",
+              "RelativeDocumentMoniker": "Game.BLL\\DTOs\\ViewOrdersDTO.cs",
+              "ToolTip": "F:\\.Net\\GameSep\\Course_Project\\Game.BLL\\DTOs\\ViewOrdersDTO.cs",
+              "RelativeToolTip": "Game.BLL\\DTOs\\ViewOrdersDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-18T07:29:25.279Z",
+              "WhenOpened": "2026-05-18T08:15:56.538Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
+              "Title": "OrdersDTO.cs",
+              "DocumentMoniker": "F:\\.Net\\GameSep\\Course_Project\\Game.BLL\\DTOs\\OrdersDTO.cs",
+              "RelativeDocumentMoniker": "Game.BLL\\DTOs\\OrdersDTO.cs",
+              "ToolTip": "F:\\.Net\\GameSep\\Course_Project\\Game.BLL\\DTOs\\OrdersDTO.cs",
+              "RelativeToolTip": "Game.BLL\\DTOs\\OrdersDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-18T08:14:40.059Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "LibraryViewDTO.cs",
+              "DocumentMoniker": "F:\\.Net\\GameSep\\Course_Project\\Game.BLL\\DTOs\\LibraryViewDTO.cs",
+              "RelativeDocumentMoniker": "Game.BLL\\DTOs\\LibraryViewDTO.cs",
+              "ToolTip": "F:\\.Net\\GameSep\\Course_Project\\Game.BLL\\DTOs\\LibraryViewDTO.cs",
+              "RelativeToolTip": "Game.BLL\\DTOs\\LibraryViewDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-18T08:10:44.592Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "GameDTO.cs",
+              "DocumentMoniker": "F:\\.Net\\GameSep\\Course_Project\\Game.BLL\\DTOs\\GameDTO.cs",
+              "RelativeDocumentMoniker": "Game.BLL\\DTOs\\GameDTO.cs",
+              "ToolTip": "F:\\.Net\\GameSep\\Course_Project\\Game.BLL\\DTOs\\GameDTO.cs",
+              "RelativeToolTip": "Game.BLL\\DTOs\\GameDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-18T08:02:09.418Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "GameCreateDTO.cs",
+              "DocumentMoniker": "F:\\.Net\\GameSep\\Course_Project\\Game.BLL\\DTOs\\GameCreateDTO.cs",
+              "RelativeDocumentMoniker": "Game.BLL\\DTOs\\GameCreateDTO.cs",
+              "ToolTip": "F:\\.Net\\GameSep\\Course_Project\\Game.BLL\\DTOs\\GameCreateDTO.cs",
+              "RelativeToolTip": "Game.BLL\\DTOs\\GameCreateDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-18T08:06:27.222Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "UserRegisterDTO.cs",
+              "DocumentMoniker": "F:\\.Net\\GameSep\\Course_Project\\Game.BLL\\DTOs\\UserRegisterDTO.cs",
+              "RelativeDocumentMoniker": "Game.BLL\\DTOs\\UserRegisterDTO.cs",
+              "ToolTip": "F:\\.Net\\GameSep\\Course_Project\\Game.BLL\\DTOs\\UserRegisterDTO.cs",
+              "RelativeToolTip": "Game.BLL\\DTOs\\UserRegisterDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-18T08:09:25.86Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "UserDTO.cs",
+              "DocumentMoniker": "F:\\.Net\\GameSep\\Course_Project\\Game.BLL\\DTOs\\UserDTO.cs",
+              "RelativeDocumentMoniker": "Game.BLL\\DTOs\\UserDTO.cs",
+              "ToolTip": "F:\\.Net\\GameSep\\Course_Project\\Game.BLL\\DTOs\\UserDTO.cs",
+              "RelativeToolTip": "Game.BLL\\DTOs\\UserDTO.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-18T08:08:11.719Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "GameSpdbContext.cs",
               "DocumentMoniker": "F:\\.Net\\GameSep\\Course_Project\\Game.DAL\\EF\\GameSpdbContext.cs",
               "RelativeDocumentMoniker": "Game.DAL\\EF\\GameSpdbContext.cs",
@@ -83,12 +198,36 @@
               "RelativeToolTip": "Game.DAL\\EF\\GameSpdbContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-18T07:02:29.815Z",
+              "WhenOpened": "2026-05-18T07:02:29.815Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Game.cs",
+              "DocumentMoniker": "F:\\.Net\\GameSep\\Course_Project\\Game.DAL\\EF\\Tables\\Game.cs",
+              "RelativeDocumentMoniker": "Game.DAL\\EF\\Tables\\Game.cs",
+              "ToolTip": "F:\\.Net\\GameSep\\Course_Project\\Game.DAL\\EF\\Tables\\Game.cs",
+              "RelativeToolTip": "Game.DAL\\EF\\Tables\\Game.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAcwA4AAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-18T07:19:43.488Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 11,
+              "Title": "Order.cs",
+              "DocumentMoniker": "F:\\.Net\\GameSep\\Course_Project\\Game.DAL\\EF\\Tables\\Order.cs",
+              "RelativeDocumentMoniker": "Game.DAL\\EF\\Tables\\Order.cs",
+              "ToolTip": "F:\\.Net\\GameSep\\Course_Project\\Game.DAL\\EF\\Tables\\Order.cs",
+              "RelativeToolTip": "Game.DAL\\EF\\Tables\\Order.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-18T07:29:25.279Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "GameRepository.cs",
               "DocumentMoniker": "F:\\.Net\\GameSep\\Course_Project\\Game.DAL\\EF\\Repos\\GameRepository.cs",
               "RelativeDocumentMoniker": "Game.DAL\\EF\\Repos\\GameRepository.cs",
@@ -101,7 +240,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 12,
               "Title": "User.cs",
               "DocumentMoniker": "F:\\.Net\\GameSep\\Course_Project\\Game.DAL\\EF\\Tables\\User.cs",
               "RelativeDocumentMoniker": "Game.DAL\\EF\\Tables\\User.cs",
@@ -109,12 +248,11 @@
               "RelativeToolTip": "Game.DAL\\EF\\Tables\\User.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-18T07:16:09.73Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-18T07:16:09.73Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 13,
               "Title": "Library.cs",
               "DocumentMoniker": "F:\\.Net\\GameSep\\Course_Project\\Game.DAL\\EF\\Tables\\Library.cs",
               "RelativeDocumentMoniker": "Game.DAL\\EF\\Tables\\Library.cs",
@@ -122,25 +260,11 @@
               "RelativeToolTip": "Game.DAL\\EF\\Tables\\Library.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-18T06:42:29.345Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-18T06:42:29.345Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Game.cs",
-              "DocumentMoniker": "F:\\.Net\\GameSep\\Course_Project\\Game.DAL\\EF\\Tables\\Game.cs",
-              "RelativeDocumentMoniker": "Game.DAL\\EF\\Tables\\Game.cs",
-              "ToolTip": "F:\\.Net\\GameSep\\Course_Project\\Game.DAL\\EF\\Tables\\Game.cs",
-              "RelativeToolTip": "Game.DAL\\EF\\Tables\\Game.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAcwBIAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-18T07:19:43.488Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 14,
               "Title": "Class1.cs",
               "DocumentMoniker": "F:\\.Net\\GameSep\\Course_Project\\Game.DAL\\Class1.cs",
               "RelativeDocumentMoniker": "Game.DAL\\Class1.cs",
@@ -152,7 +276,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 15,
               "Title": "Class1.cs",
               "DocumentMoniker": "F:\\.Net\\GameSep\\Course_Project\\Game.BLL\\Class1.cs",
               "RelativeDocumentMoniker": "Game.BLL\\Class1.cs",
@@ -161,6 +285,14 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-16T20:33:56.683Z"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{c9c0ae26-aa77-11d2-b3f0-0000f87570ee}"
             }
           ]
         }
