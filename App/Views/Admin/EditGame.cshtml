@@ -1,0 +1,100 @@
+@model Game.BLL.DTOs.GameDTO
+@{
+    ViewData["Title"] = "Edit Game";
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Edit Game – GameSP Admin</title>
+</head>
+<body>
+    <div style="display: flex; gap: 20px;">
+        <div style="width: 200px; border-right: 1px solid #ccc; padding-right: 20px; display: flex; flex-direction: column; gap: 10px;">
+            <h3>GameSP Admin</h3>
+            <button type="button" onclick="window.location.href='/User/Index'" style="padding: 8px; cursor: pointer; text-align: left; background: #f0f0f0; border: 1px solid #ccc; border-radius: 4px; font-weight: bold; width: 100%;">Home</button>
+            <button type="button" onclick="window.location.href='/Admin/Index'" style="padding: 8px; cursor: pointer; text-align: left; background: #f0f0f0; border: 1px solid #ccc; border-radius: 4px; font-weight: bold; width: 100%;">Dashboard</button>
+            <button type="button" onclick="window.location.href='/Admin/Games'" style="padding: 8px; cursor: pointer; text-align: left; background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 4px; font-weight: bold; width: 100%; color: #4f46e5;">Manage Games</button>
+            <button type="button" onclick="window.location.href='/Admin/AddGame'" style="padding: 8px; cursor: pointer; text-align: left; background: #f0f0f0; border: 1px solid #ccc; border-radius: 4px; font-weight: bold; width: 100%;">Add Game</button>
+            <button type="button" onclick="window.location.href='/Admin/Users'" style="padding: 8px; cursor: pointer; text-align: left; background: #f0f0f0; border: 1px solid #ccc; border-radius: 4px; font-weight: bold; width: 100%;">Manage Users</button>
+            <hr style="margin: 5px 0; border: none; border-top: 1px solid #ccc; width: 100%;" />
+            <button type="button" onclick="window.location.href='/Auth/Logout'" style="padding: 8px; cursor: pointer; text-align: left; background: #fee; border: 1px solid #ecc; border-radius: 4px; font-weight: bold; width: 100%; color: #c00;">Logout</button>
+        </div>
+        <div>
+            <p><button type="button" onclick="window.location.href='/Admin/Games'" style="padding: 6px 12px; cursor: pointer; font-size: 13px; font-weight: bold; border-radius: 4px; border: 1px solid #ccc; background-color: #fff;">← Back to Games</button></p>
+            @if (ViewBag.Error != null)
+            {
+                <p style="color: red; font-weight: bold;">@ViewBag.Error</p>
+            }
+
+            <h2>Edit Game</h2>
+            <p>Updating: <strong>@Model.Title</strong></p>
+            <hr />
+
+            <form method="post" enctype="multipart/form-data">
+                @Html.AntiForgeryToken()
+                <input type="hidden" asp-for="Id" />
+                <div>
+                    <label>Game Title *</label><br />
+                    <input asp-for="Title" required />
+                </div>
+                <br />
+                <div>
+                    <label>Genre *</label><br />
+                    <select asp-for="Genre" required>
+                        <option value="Action">Action</option>
+                        <option value="RPG">RPG</option>
+                        <option value="Strategy">Strategy</option>
+                        <option value="Adventure">Adventure</option>
+                        <option value="Sports">Sports</option>
+                        <option value="Simulation">Simulation</option>
+                        <option value="Horror">Horror</option>
+                        <option value="Puzzle">Puzzle</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <br />
+                <div>
+                    <label>Price (USD) *</label><br />
+                    <input asp-for="Price" type="number" step="0.01" min="0" required />
+                </div>
+                <br />
+                <div>
+                    <label>Description</label><br />
+                    <textarea asp-for="Description" rows="3"></textarea>
+                </div>
+                <br />
+                <div>
+                    <label>Cover Image</label><br />
+                    @if (Model.Cover != null && Model.Cover.Length > 0)
+                    {
+                        var b64 = Convert.ToBase64String(Model.Cover);
+                        <img src="data:image/jpeg;base64,@b64" alt="Current Cover" style="max-width: 140px; display: block; margin-bottom: 5px;" />
+                        <small>Current cover (upload new to replace)</small>
+                        <br />
+                    }
+                    <input type="file" name="CoverFile" accept="image/*" onchange="previewCover(this)" />
+                    <br />
+                    <img id="coverPreview" style="max-width: 150px; display: none; margin-top: 10px;" />
+                </div>
+                <br />
+                <button type="submit">Save Changes</button>
+            </form>
+        </div>
+    </div>
+    <script>
+        function previewCover(input) {
+            var preview = document.getElementById('coverPreview');
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function(e) {
+                    preview.src = e.target.result;
+                    preview.style.display = 'block';
+                };
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+    </script>
+</body>
+</html>

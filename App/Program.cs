@@ -2,10 +2,7 @@ using Game.BLL.Services;
 using Game.DAL.Repos;
 
 var builder = WebApplication.CreateBuilder(args);
-
-// Add services to the container.
 builder.Services.AddControllersWithViews();
-
 builder.Services.AddScoped<Game.DAL.Repos.GameRepository>();
 builder.Services.AddScoped<Game.BLL.Services.GameService>();
 
@@ -14,15 +11,21 @@ builder.Services.AddScoped<GameRepository>();
 builder.Services.AddScoped<UserRepository>();
 builder.Services.AddScoped<GameService>();
 builder.Services.AddScoped<AuthService>();
+builder.Services.AddScoped<AdminService>();  
+builder.Services.AddScoped<NotificationService>();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
+using (var scope = app.Services.CreateScope())
+{
+    var db = scope.ServiceProvider.GetRequiredService<Game.DAL.EF.GameSpdbContext>();
+    Game.DAL.EF.DbInitializer.Initialize(db);
+}
+
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-    app.UseHsts();
+   app.UseHsts();
 }
 
 app.UseHttpsRedirection();

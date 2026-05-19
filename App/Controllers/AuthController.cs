@@ -1,12 +1,12 @@
-using Microsoft.AspNetCore.Mvc;
-using Game.BLL.Services;
 using Game.BLL.DTOs;
+using Game.BLL.Services;
+using Game.DAL.EF.Tables;
+using Microsoft.AspNetCore.Mvc;
 namespace App.Controllers
 {
     public class AuthController : Controller
     {
         private readonly AuthService _authService;
-
         public AuthController(AuthService authService)
         {
             _authService = authService;
@@ -25,13 +25,21 @@ namespace App.Controllers
                 ViewBag.Error = "Invalid email or password";
                 return View();
             }
+            if (token == "BLOCKED")
+            {
+                ViewBag.Error = "Your account has been blocked. Please contact the administrator.";
+                return View();
+            }
             Response.Cookies.Append("AuthToken", token);
-
+            var role = _authService.GetRoleByToken(token);
+            if (role == "Admin")
+                return RedirectToAction("Index", "Admin");
             return RedirectToAction("Index", "User");
         }
         [HttpGet]
         public IActionResult Register()
         {
+            ViewBag.AdminExists = _authService.AdminExists();
             return View();
         }
         [HttpPost]
@@ -41,6 +49,7 @@ namespace App.Controllers
             if (!result)
             {
                 ViewBag.Error = "Registration failed. Email might already be in use.";
+                ViewBag.AdminExists = _authService.AdminExists();
                 return View();
             }
             return RedirectToAction("Login");

@@ -1,74 +1,48 @@
-@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+@model IEnumerable<Game.BLL.DTOs.GameDTO>
+
 @{
-}
-@{
-    ViewData["Title"] = "User Home";
+    ViewData["Title"] = "User Dashboard";
 }
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-
-    <div class="container">
-
-        <a class="navbar-brand text-warning fw-bold"
-           asp-controller="User"
-           asp-action="Index">
-
-            🎮 GameSP
-
-        </a>
-
-        <div class="ms-auto d-flex align-items-center">
-            @if (!string.IsNullOrEmpty(ViewBag.UserName))
-            {
-                <span class="text-light me-3 fw-bold">Welcome, @ViewBag.UserName</span>
-            }
-
-            <a asp-controller="User"
-               asp-action="Profile"
-               class="btn btn-outline-light me-2">
-
-                Profile
-
-            </a>
-
-            <a asp-controller="User"
-               asp-action="Library"
-               class="btn btn-outline-info me-2">
-
-                Library
-
-            </a>
-
-            <a asp-controller="User"
-               asp-action="Balance"
-               class="btn btn-outline-success me-2">
-
-                Balance
-
-            </a>
-
-            <a asp-controller="Auth"
-               asp-action="Logout"
-               class="btn btn-danger">
-
-                Logout
-
-            </a>
-
-        </div>
-
-    </div>
-
-</nav>
-
-<div class="container mt-5">
-
+<div>
     <h2>Welcome to GameSP Dashboard</h2>
+    <p>You are now logged in.</p>
+    <p>Wallet Balance: $@ViewBag.Balance</p>
+    <hr />
 
-    <p>
-        You are now logged in.
-    </p>
+    <h3>Available Games</h3>
 
+    @if (Model == null || !Model.Any())
+    {
+        <p>No games available right now.</p>
+    }
+    else
+    {
+        <div class="game-grid">
+            @foreach (var game in Model)
+            {
+                <div class="game-card">
+                    @if (game.Cover != null && game.Cover.Length > 0)
+                    {
+                        var base64 = Convert.ToBase64String(game.Cover);
+                        var imgSrc = $"data:image/jpeg;base64,{base64}";
+                        <img src="@imgSrc" alt="@game.Title" class="game-card-img" />
+                    }
+                    else
+                    {
+                        <div class="game-card-no-img">
+                            No Cover Image
+                        </div>
+                    }
+
+                    <h4>@game.Title</h4>
+                    <p>Genre: @game.Genre</p>
+                    <div class="price">$@game.Price.ToString("N2")</div>
+                    <p style="margin: 0;">
+                        <a asp-controller="Home" asp-action="Details" asp-route-id="@game.Id" class="btn btn-wishlist" style="width: 100%; box-sizing: border-box;">View Details</a>
+                    </p>
+                </div>
+            }
+        </div>
+    }
 </div>

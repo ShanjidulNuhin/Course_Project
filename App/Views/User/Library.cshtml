@@ -1,10 +1,146 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+@model IEnumerable<Game.BLL.DTOs.LibraryViewDTO>
 @{
+    ViewData["Title"] = "My Game Library";
+    var purchased = Model?.Where(m => m.Cart_Type == "Purchased").ToList() ?? new List<Game.BLL.DTOs.LibraryViewDTO>();
+    var wishlisted = Model?.Where(m => m.Cart_Type == "Wishlist").ToList() ?? new List<Game.BLL.DTOs.LibraryViewDTO>();
 }
-<h2>Game Library</h2>
+<div class="library-container">
+    <h2 class="page-title">My Game Library</h2>
+    <p class="page-subtitle">View your collection of purchased and wishlisted games below.</p>
+    
+    @if (TempData["Success"] != null)
+    {
+        <div class="alert alert-success">@TempData["Success"]</div>
+    }
+    @if (TempData["Error"] != null)
+    {
+        <div class="alert alert-danger">@TempData["Error"]</div>
+    }
+    <hr class="section-divider" />
+    <div class="library-section">
+        <h3 class="section-title">Purchased Games</h3>
+        @if (!purchased.Any())
+        {
+            <p class="empty-text">You do not own any games yet.</p>
+        }
+        else
+        {
+            <div class="table-responsive">
+                <table class="table library-table">
+                    <thead>
+                        <tr>
+                            <th>Cover</th>
+                            <th>Title</th>
+                            <th>Genre</th>
+                            <th>Price Paid</th>
+                            <th>Purchase Date</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in purchased)
+                        {
+                            <tr>
+                                <td>
+                                    @if (item.Cover != null && item.Cover.Length > 0)
+                                    {
+                                        var base64 = Convert.ToBase64String(item.Cover);
+                                        var imgSrc = $"data:image/jpeg;base64,{base64}";
+                                        <img src="@imgSrc" alt="@item.GameTitle" class="library-cover" />
+                                    }
+                                    else
+                                    {
+                                        <span class="no-cover-text">No Image</span>
+                                    }
+                                </td>
+                                <td class="game-title">@item.GameTitle</td>
+                                <td class="game-genre">@item.Genre</td>
+                                <td class="game-price">$@item.Price.ToString("N2")</td>
+                                <td class="order-date">@(item.OrderDate?.ToString("yyyy-MM-dd") ?? "N/A")</td>
+                                <td>
+                                    <a asp-controller="Home" asp-action="Details" asp-route-id="@item.GameId" class="btn-action view-btn">View Details</a>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        }
+    </div>
 
-<p>
-    Purchased games and wishlist will appear here.
-</p>
+    <!-- Wishlist Section -->
+    <div class="library-section">
+        <h3 class="section-title">My Wishlist</h3>
+        @if (!wishlisted.Any())
+        {
+            <p class="empty-text">Your wishlist is empty.</p>
+        }
+        else
+        {
+            <div class="table-responsive">
+                <table class="table library-table">
+                    <thead>
+                        <tr>
+                            <th>Cover</th>
+                            <th>Title</th>
+                            <th>Genre</th>
+                            <th>Price</th>
+                            <th>Added Date</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in wishlisted)
+                        {
+                            <tr>
+                                <td>
+                                    @if (item.Cover != null && item.Cover.Length > 0)
+                                    {
+                                        var base64 = Convert.ToBase64String(item.Cover);
+                                        var imgSrc = $"data:image/jpeg;base64,{base64}";
+                                        <img src="@imgSrc" alt="@item.GameTitle" class="library-cover" />
+                                    }
+                                    else
+                                    {
+                                        <span class="no-cover-text">No Image</span>
+                                    }
+                                </td>
+                                <td class="game-title">@item.GameTitle</td>
+                                <td class="game-genre">@item.Genre</td>
+                                <td class="game-price">$@item.Price.ToString("N2")</td>
+                                <td class="order-date">@(item.OrderDate?.ToString("yyyy-MM-dd") ?? "N/A")</td>
+                                <td>
+                                    <div class="library-actions">
+                                        <a asp-controller="Home" asp-action="Details" asp-route-id="@item.GameId" class="btn-action view-btn">View</a>
+                                        
+                                        @* Check if user already purchased it *@
+                                        @if (purchased.Any(p => p.GameId == item.GameId))
+                                        {
+                                            <span class="badge-status owned-badge-sm">Owned</span>
+                                        }
+                                        else
+                                        {
+                                            <form asp-controller="User" asp-action="PurchaseGame" method="post" class="inline-form">
+                                                <input type="hidden" name="gameId" value="@item.GameId" />
+                                                <button type="submit" class="btn-action buy-btn" onclick="return confirm('Are you sure you want to purchase @item.GameTitle for $@item.Price?');">
+                                                    Buy
+                                                </button>
+                                            </form>
+                                        }
+
+                                        <form asp-controller="User" asp-action="RemoveFromWishlist" method="post" class="inline-form">
+                                            <input type="hidden" name="gameId" value="@item.GameId" />
+                                            <button type="submit" class="btn-action remove-btn" onclick="return confirm('Remove @item.GameTitle from your wishlist?');">
+                                                Remove
+                                            </button>
+                                        </form>
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        }
+    </div>
+</div>

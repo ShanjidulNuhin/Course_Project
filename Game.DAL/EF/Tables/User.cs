@@ -16,6 +16,7 @@ public partial class User
     public string? Role { get; set; }
     public string? Token { get; set; } 
     public decimal? Blance { get; set; }
+    public int ? IsActive { get; set; }
 
     public virtual ICollection<Order> Orders { get; set; } = new List<Order>();
     public virtual ICollection<Library> Libraries { get; set; } = new List<Library>();

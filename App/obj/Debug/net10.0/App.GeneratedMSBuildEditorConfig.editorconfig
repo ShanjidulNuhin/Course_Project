@@ -23,12 +23,36 @@ build_property._RazorSourceGeneratorDebug =
 build_property.EffectiveAnalysisLevelStyle = 10.0
 build_property.EnableCodeStyleSeverity = 
 
+[F:/.Net/GameSep/Course_Project/App/Views/Admin/AddGame.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRkR2FtZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/.Net/GameSep/Course_Project/App/Views/Admin/EditGame.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRWRpdEdhbWUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/.Net/GameSep/Course_Project/App/Views/Admin/Games.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cR2FtZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/.Net/GameSep/Course_Project/App/Views/Admin/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/.Net/GameSep/Course_Project/App/Views/Admin/Users.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cVXNlcnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [F:/.Net/GameSep/Course_Project/App/Views/Auth/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [F:/.Net/GameSep/Course_Project/App/Views/Auth/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/.Net/GameSep/Course_Project/App/Views/Home/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [F:/.Net/GameSep/Course_Project/App/Views/Home/Index.cshtml]
@@ -41,6 +65,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [F:/.Net/GameSep/Course_Project/App/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/.Net/GameSep/Course_Project/App/Views/Shared/_UserNavbar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Vc2VyTmF2YmFyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [F:/.Net/GameSep/Course_Project/App/Views/Shared/_ValidationScriptsPartial.cshtml]

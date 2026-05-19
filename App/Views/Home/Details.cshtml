@@ -1,0 +1,103 @@
+@model Game.BLL.DTOs.GameDTO
+@inject Game.DAL.Repos.UserRepository UserRepository
+@inject Game.DAL.EF.GameSpdbContext DbContext
+
+@{
+    ViewData["Title"] = Model.Title + " - Details";
+    var token = Context.Request.Cookies["AuthToken"];
+    Game.DAL.EF.Tables.User? user = null;
+    if (token != null)
+    {
+        user = UserRepository.GetByToken(token);
+    }
+
+    bool ownsGame = false;
+    bool isWishlisted = false;
+    if (user != null)
+    {
+        ownsGame = DbContext.Libraries.Any(l => l.UserId == user.Id && l.GameId == Model.Id && l.Cart_Type == "Purchased");
+        isWishlisted = DbContext.Libraries.Any(l => l.UserId == user.Id && l.GameId == Model.Id && l.Cart_Type == "Wishlist");
+    }
+}
+
+<div>
+    <h2>Game Details</h2>
+
+    @if (TempData["Success"] != null)
+    {
+        <p style="color: green; font-weight: bold;">@TempData["Success"]</p>
+    }
+    @if (TempData["Error"] != null)
+    {
+        <p style="color: red; font-weight: bold;">@TempData["Error"]</p>
+    }
+
+    <div>
+        @if (Model.Cover != null && Model.Cover.Length > 0)
+        {
+            var base64 = Convert.ToBase64String(Model.Cover);
+            var imgSrc = $"data:image/jpeg;base64,{base64}";
+            <img src="@imgSrc" alt="@Model.Title" style="max-width: 300px; display: block; margin-bottom: 10px;" />
+        }
+        else
+        {
+            <p>No cover image available</p>
+        }
+
+        <h3>@Model.Title</h3>
+        <p><strong>Genre:</strong> @Model.Genre</p>
+        <p><strong>Price:</strong> $@Model.Price</p>
+        <p><strong>Description:</strong></p>
+        <p>@Model.Description</p>
+    </div>
+
+    <div style="margin-top: 20px;">
+        @if (user == null)
+        {
+            <p><em>Please <a asp-controller="Auth" asp-action="Login">login</a> to purchase or wishlist this game.</em></p>
+        }
+        else
+        {
+            <div class="game-actions-container" style="display: flex; gap: 15px; align-items: center; flex-wrap: wrap;">
+                @if (ownsGame)
+                {
+                    <span class="badge-status owned-badge">You already own this game!</span>
+                }
+                else
+                {
+                    <form asp-controller="User" asp-action="PurchaseGame" method="post" style="margin: 0;">
+                        <input type="hidden" name="gameId" value="@Model.Id" />
+                        <button type="submit" class="btn btn-purchase" onclick="return confirm('Are you sure you want to purchase @Model.Title for $@Model.Price?');">
+                            Purchase Game ($@Model.Price)
+                        </button>
+                    </form>
+                }
+
+                @if (isWishlisted)
+                {
+                    <span class="badge-status wishlisted-badge">This game is in your wishlist!</span>
+                }
+                else
+                {
+                    <form asp-controller="User" asp-action="WishlistGame" method="post" style="margin: 0;">
+                        <input type="hidden" name="gameId" value="@Model.Id" />
+                        <button type="submit" class="btn btn-wishlist">
+                            Add to Wishlist
+                        </button>
+                    </form>
+                }
+            </div>
+        }
+    </div>
+
+    <p style="margin-top: 20px;">
+        @if (user != null)
+        {
+            <a asp-controller="User" asp-action="Index">Back to Dashboard</a>
+        }
+        else
+        {
+            <a asp-controller="Home" asp-action="Index">Back to Home</a>
+        }
+    </p>
+</div>

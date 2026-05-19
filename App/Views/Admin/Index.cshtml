@@ -1,0 +1,739 @@
+@{
+    ViewData["Title"] = "Admin Dashboard";
+    Layout = null;
+    var users = ViewBag.Users as IEnumerable<Game.BLL.DTOs.UserDTO> ?? new List<Game.BLL.DTOs.UserDTO>();
+    var games = ViewBag.Games as IEnumerable<Game.BLL.DTOs.GameDTO> ?? new List<Game.BLL.DTOs.GameDTO>();
+    var blockedUsers = ViewBag.BlockedUsers as IEnumerable<Game.BLL.DTOs.UserDTO> ?? new List<Game.BLL.DTOs.UserDTO>();
+    var mostPurchased = ViewBag.MostPurchasedGames as IEnumerable<Game.BLL.DTOs.MostPurchasedGameDTO> ?? new List<Game.BLL.DTOs.MostPurchasedGameDTO>();
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard – GameSP</title>
+    <style>
+        :root {
+            --primary-color: #4f46e5;
+            --primary-hover: #4338ca;
+            --secondary-color: #64748b;
+            --bg-color: #f8fafc;
+            --text-color: #1e293b;
+            --border-color: #e2e8f0;
+            --success-color: #10b981;
+            --info-color: #3b82f6;
+            --danger-color: #ef4444;
+        }
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.5;
+        }
+        .admin-container {
+            display: flex;
+            min-height: 100vh;
+        }
+        .sidebar {
+            width: 250px;
+            background-color: #ffffff;
+            border-right: 1px solid var(--border-color);
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            box-shadow: 2px 0 8px rgba(0,0,0,0.02);
+        }
+        .sidebar-brand {
+            font-size: 22px;
+            font-weight: 800;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            border-bottom: 2px solid var(--bg-color);
+            padding-bottom: 15px;
+        }
+        .sidebar-menu {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            flex-grow: 1;
+        }
+        .sidebar-btn {
+            display: flex;
+            align-items: center;
+            padding: 12px 16px;
+            font-size: 14px;
+            font-weight: 600;
+            color: #475569;
+            background: transparent;
+            border: 1px solid transparent;
+            border-radius: 8px;
+            cursor: pointer;
+            text-align: left;
+            transition: all 0.2s ease;
+            width: 100%;
+        }
+        .sidebar-btn:hover {
+            background-color: #f1f5f9;
+            color: var(--primary-color);
+        }
+        .sidebar-btn.active {
+            background-color: #eff6ff;
+            color: var(--primary-color);
+            border-color: #bfdbfe;
+        }
+        .sidebar-btn.btn-logout {
+            color: var(--danger-color);
+            border-color: transparent;
+            background-color: #fff5f5;
+        }
+        .sidebar-btn.btn-logout:hover {
+            background-color: #fee2e2;
+            color: #b91c1c;
+        }
+        .main-content {
+            flex: 1;
+            padding: 40px;
+            overflow-y: auto;
+        }
+        .dashboard-header {
+            margin-bottom: 32px;
+        }
+        .dashboard-header h1 {
+            font-size: 28px;
+            font-weight: 800;
+            margin: 0 0 8px 0;
+            color: #0f172a;
+        }
+        .dashboard-header p {
+            margin: 0;
+            color: var(--secondary-color);
+            font-size: 15px;
+        }
+        
+        /* Stats Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 24px;
+            margin-bottom: 40px;
+        }
+        .stat-card {
+            background-color: #ffffff;
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 24px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 20px -8px rgba(0, 0, 0, 0.15);
+            border-color: #cbd5e1;
+        }
+        .stat-card.active {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 2px #c7d2fe, 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+        .stat-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: transparent;
+        }
+        .stat-card.card-balance::after { background: var(--primary-color); }
+        .stat-card.card-users::after { background: var(--success-color); }
+        .stat-card.card-blocked::after { background: var(--danger-color); }
+        .stat-card.card-games::after { background: var(--info-color); }
+        
+        .stat-label {
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--secondary-color);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 8px;
+        }
+        .stat-value {
+            font-size: 32px;
+            font-weight: 800;
+            color: #0f172a;
+            line-height: 1.1;
+            margin-bottom: 6px;
+        }
+        .stat-desc {
+            font-size: 13px;
+            color: var(--secondary-color);
+        }
+        
+        /* Details Panel */
+        .details-panel {
+            background-color: #ffffff;
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            margin-bottom: 40px;
+        }
+        .details-panel-title {
+            font-size: 20px;
+            font-weight: 700;
+            margin-top: 0;
+            margin-bottom: 20px;
+            color: #0f172a;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .details-panel-title .btn-close-details {
+            font-size: 12px;
+            font-weight: 600;
+            background: #f1f5f9;
+            color: var(--secondary-color);
+            border: none;
+            padding: 6px 12px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+        .details-panel-title .btn-close-details:hover {
+            background: #e2e8f0;
+            color: #0f172a;
+        }
+        .details-tab {
+            display: none;
+        }
+        .details-tab.active {
+            display: block;
+        }
+        
+        /* Table Styling */
+        .table-responsive {
+            width: 100%;
+            overflow-x: auto;
+        }
+        .modern-table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+        }
+        .modern-table th {
+            background-color: #f8fafc;
+            color: var(--secondary-color);
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 11px;
+            letter-spacing: 0.05em;
+            padding: 14px 16px;
+            border-bottom: 2px solid var(--border-color);
+        }
+        .modern-table td {
+            padding: 14px 16px;
+            border-bottom: 1px solid var(--border-color);
+            font-size: 14px;
+            color: #334155;
+            vertical-align: middle;
+        }
+        .modern-table tr:hover {
+            background-color: #f8fafc;
+        }
+        
+        .user-badge {
+            padding: 4px 8px;
+            border-radius: 6px;
+            font-size: 12px;
+            font-weight: 600;
+            display: inline-block;
+        }
+        .badge-active {
+            background-color: #dcfce7;
+            color: #15803d;
+        }
+        .badge-blocked {
+            background-color: #fee2e2;
+            color: #b91c1c;
+        }
+        .badge-admin {
+            background-color: #eff6ff;
+            color: #1d4ed8;
+        }
+        .badge-customer {
+            background-color: #f1f5f9;
+            color: #475569;
+        }
+        
+        /* Buttons */
+        .btn-table {
+            padding: 6px 12px;
+            font-size: 12px;
+            font-weight: 600;
+            border-radius: 6px;
+            border: 1px solid transparent;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            margin-right: 4px;
+        }
+        .btn-table-block {
+            background-color: #fee2e2;
+            color: #b91c1c;
+            border-color: #fca5a5;
+        }
+        .btn-table-block:hover {
+            background-color: #b91c1c;
+            color: #fff;
+        }
+        .btn-table-unblock {
+            background-color: #dcfce7;
+            color: #15803d;
+            border-color: #86efac;
+        }
+        .btn-table-unblock:hover {
+            background-color: #15803d;
+            color: #fff;
+        }
+        .btn-table-promote {
+            background-color: #eff6ff;
+            color: #1d4ed8;
+            border-color: #93c5fd;
+        }
+        .btn-table-promote:hover {
+            background-color: #1d4ed8;
+            color: #fff;
+        }
+        .btn-add-inline {
+            background-color: var(--primary-color);
+            color: #fff;
+            border: none;
+            padding: 8px 14px;
+            font-size: 12px;
+            font-weight: 600;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .btn-add-inline:hover {
+            background-color: var(--primary-hover);
+        }
+        
+        /* Most Purchased List */
+        .most-purchased-section {
+            background-color: #ffffff;
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+        .most-purchased-section h2 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-top: 0;
+            margin-bottom: 20px;
+            color: #0f172a;
+        }
+        
+        .game-cover-sm {
+            width: 50px;
+            height: 35px;
+            object-fit: cover;
+            border-radius: 4px;
+            background: #f1f5f9;
+        }
+    </style>
+</head>
+<body>
+    <div class="admin-container">
+        <!-- Sidebar Navigation -->
+        <div class="sidebar">
+            <div class="sidebar-brand">
+                GameSP Admin
+            </div>
+            <div class="sidebar-menu">
+                <button class="sidebar-btn" onclick="window.location.href='/User/Index'">
+                    Home
+                </button>
+                <button class="sidebar-btn active" onclick="window.location.href='/Admin/Index'">
+                    Dashboard
+                </button>
+                <button class="sidebar-btn" onclick="window.location.href='/Admin/Games'">
+                    Manage Games
+                </button>
+                <button class="sidebar-btn" onclick="window.location.href='/Admin/AddGame'">
+                    Add Game
+                </button>
+                <button class="sidebar-btn" onclick="window.location.href='/Admin/Users'">
+                    Manage Users
+                </button>
+                
+                <button class="sidebar-btn btn-logout" onclick="window.location.href='/Auth/Logout'">
+                    Logout
+                </button>
+            </div>
+        </div>
+
+        <!-- Main Content Area -->
+        <div class="main-content">
+            @if (TempData["Success"] != null)
+            {
+                <div style="background-color: #dcfce7; color: #15803d; border: 1px solid #86efac; padding: 12px 16px; border-radius: 8px; margin-bottom: 20px; font-weight: 600;">
+                    @TempData["Success"]
+                </div>
+            }
+
+            <div class="dashboard-header">
+                <h1>Admin Dashboard</h1>
+                <p>Platform metrics and details overview. Click a card to view individual breakdowns.</p>
+            </div>
+
+            <!-- Stats grid containing the four sections -->
+            <div class="stats-grid">
+                <!-- Card 1: Balance Show -->
+                <div class="stat-card card-balance" id="card-balance" onclick="toggleDetails('balance')">
+                    <div class="stat-label">Total Users Balance</div>
+                    <div class="stat-value">$@(((decimal)ViewBag.TotalBalance).ToString("N2"))</div>
+                    <div class="stat-desc">Click to see individual balances</div>
+                </div>
+
+                <!-- Card 2: Registered Users -->
+                <div class="stat-card card-users" id="card-users" onclick="toggleDetails('users')">
+                    <div class="stat-label">Registered Customers</div>
+                    <div class="stat-value">@ViewBag.UsersCount</div>
+                    <div class="stat-desc">Click to see all customer accounts</div>
+                </div>
+
+                <!-- Card 3: Blocked Users -->
+                <div class="stat-card card-blocked" id="card-blocked" onclick="toggleDetails('blocked')">
+                    <div class="stat-label">Blocked Accounts</div>
+                    <div class="stat-value">@ViewBag.BlockedCount</div>
+                    <div class="stat-desc">Click to view restricted users</div>
+                </div>
+
+                <!-- Card 4: Games Count -->
+                <div class="stat-card card-games" id="card-games" onclick="toggleDetails('games')">
+                    <div class="stat-label">Store Games</div>
+                    <div class="stat-value">@ViewBag.GamesCount</div>
+                    <div class="stat-desc">Click to see catalogue preview</div>
+                </div>
+            </div>
+
+            <!-- Interactive Details Panel (Hidden by default, toggled via JS) -->
+            <div class="details-panel" id="details-panel" style="display: none;">
+                <div class="details-panel-title">
+                    <span id="details-title-text">Breakdown Details</span>
+                    <button class="btn-close-details" onclick="closeDetails()">Close Details</button>
+                </div>
+
+                <!-- Tab 1: Balance Show Details -->
+                <div class="details-tab" id="tab-balance">
+                    <div class="table-responsive">
+                        <table class="modern-table">
+                            <thead>
+                                <tr>
+                                    <th>User ID</th>
+                                    <th>Customer Name</th>
+                                    <th>Email Address</th>
+                                    <th>Role</th>
+                                    <th>Current Balance</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var u in users)
+                                {
+                                    <tr>
+                                        <td>@u.Id</td>
+                                        <td><strong>@u.Name</strong></td>
+                                        <td>@u.Email</td>
+                                        <td>
+                                            <span class="user-badge @(u.Role == "Admin" ? "badge-admin" : "badge-customer")">@u.Role</span>
+                                        </td>
+                                        <td><strong>$@(u.Blance?.ToString("N2") ?? "0.00")</strong></td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Tab 2: Users Details -->
+                <div class="details-tab" id="tab-users">
+                    <div class="table-responsive">
+                        <table class="modern-table">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>Role</th>
+                                    <th>Wallet Balance</th>
+                                    <th>Status</th>
+                                    <th>Dashboard Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var u in users)
+                                {
+                                    <tr>
+                                        <td>@u.Id</td>
+                                        <td><strong>@u.Name</strong></td>
+                                        <td>@u.Email</td>
+                                        <td>
+                                            <span class="user-badge @(u.Role == "Admin" ? "badge-admin" : "badge-customer")">@u.Role</span>
+                                        </td>
+                                        <td>$@(u.Blance?.ToString("N2") ?? "0.00")</td>
+                                        <td>
+                                            <span class="user-badge @(u.IsActive == 1 ? "badge-active" : "badge-blocked")">
+                                                @(u.IsActive == 1 ? "Active" : "Blocked")
+                                            </span>
+                                        </td>
+                                        <td>
+                                            @if (u.Role != "Admin")
+                                            {
+                                                @if (u.IsActive == 1)
+                                                {
+                                                    <form method="post" action="/Admin/BlockUser/@u.Id" style="display:inline;" onsubmit="return confirm('Block @u.Name?');">
+                                                        @Html.AntiForgeryToken()
+                                                        <button type="submit" class="btn-table btn-table-block">Block</button>
+                                                    </form>
+                                                }
+                                                else
+                                                {
+                                                    <form method="post" action="/Admin/UnblockUser/@u.Id" style="display:inline;">
+                                                        @Html.AntiForgeryToken()
+                                                        <button type="submit" class="btn-table btn-table-unblock">Unblock</button>
+                                                    </form>
+                                                }
+                                                <form method="post" action="/Admin/PromoteUser/@u.Id" style="display:inline;" onsubmit="return confirm('Promote @u.Name to Admin?');">
+                                                    @Html.AntiForgeryToken()
+                                                    <button type="submit" class="btn-table btn-table-promote">Promote</button>
+                                                </form>
+                                            }
+                                            else
+                                            {
+                                                <span>—</span>
+                                            }
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Tab 3: Blocked Users Details -->
+                <div class="details-tab" id="tab-blocked">
+                    @if (!blockedUsers.Any())
+                    {
+                        <p style="color: var(--secondary-color); margin: 0; font-weight: 500;">No restricted or blocked accounts currently on the platform.</p>
+                    }
+                    else
+                    {
+                        <div class="table-responsive">
+                            <table class="modern-table">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Name</th>
+                                        <th>Email</th>
+                                        <th>Role</th>
+                                        <th>Wallet Balance</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var u in blockedUsers)
+                                    {
+                                        <tr>
+                                            <td>@u.Id</td>
+                                            <td><strong>@u.Name</strong></td>
+                                            <td>@u.Email</td>
+                                            <td>@u.Role</td>
+                                            <td>$@(u.Blance?.ToString("N2") ?? "0.00")</td>
+                                            <td>
+                                                <form method="post" action="/Admin/UnblockUser/@u.Id" style="display:inline;">
+                                                    @Html.AntiForgeryToken()
+                                                    <button type="submit" class="btn-table btn-table-unblock">Unblock Account</button>
+                                                </form>
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    }
+                </div>
+
+                <!-- Tab 4: Games Library Details -->
+                <div class="details-tab" id="tab-games">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+                        <span style="color: var(--secondary-color); font-size: 14px; font-weight: 500;">Catalogue Preview</span>
+                        <button class="btn-add-inline" onclick="window.location.href='/Admin/AddGame'">+ Add New Game</button>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="modern-table">
+                            <thead>
+                                <tr>
+                                    <th>Cover</th>
+                                    <th>Title</th>
+                                    <th>Genre</th>
+                                    <th>Price</th>
+                                    <th>Description</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var g in games)
+                                {
+                                    <tr>
+                                        <td>
+                                            @if (g.Cover != null && g.Cover.Length > 0)
+                                            {
+                                                var b64 = Convert.ToBase64String(g.Cover);
+                                                <img src="data:image/jpeg;base64,@b64" alt="@g.Title" class="game-cover-sm" />
+                                            }
+                                            else
+                                            {
+                                                <span style="font-size: 11px; color: var(--secondary-color);">No image</span>
+                                            }
+                                        </td>
+                                        <td><strong>@g.Title</strong></td>
+                                        <td>@g.Genre</td>
+                                        <td><strong>$@g.Price.ToString("N2")</strong></td>
+                                        <td style="max-width: 250px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">@g.Description</td>
+                                        <td>
+                                            <button onclick="window.location.href='/Admin/EditGame/@g.Id'" class="btn-table btn-table-promote">Edit</button>
+                                            <form method="post" action="/Admin/DeleteGame/@g.Id" style="display:inline;" onsubmit="return confirm('Delete @g.Title?');">
+                                                @Html.AntiForgeryToken()
+                                                <button type="submit" class="btn-table btn-table-block">Delete</button>
+                                            </form>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Most Purchased Games Section (Always Visible) -->
+            <div class="most-purchased-section">
+                <h2>Most Purchased Games</h2>
+                @if (!mostPurchased.Any())
+                {
+                    <p style="color: var(--secondary-color); margin: 0; font-weight: 500;">No purchase records found yet.</p>
+                }
+                else
+                {
+                    <div class="table-responsive">
+                        <table class="modern-table">
+                            <thead>
+                                <tr>
+                                    <th>Rank</th>
+                                    <th>Cover</th>
+                                    <th>Game Title</th>
+                                    <th>Genre</th>
+                                    <th>Price</th>
+                                    <th>Total Purchases</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @{
+                                    int rank = 1;
+                                }
+                                @foreach (var g in mostPurchased)
+                                {
+                                    <tr>
+                                        <td><strong>#@rank</strong></td>
+                                        <td>
+                                            @if (g.Cover != null && g.Cover.Length > 0)
+                                            {
+                                                var b64 = Convert.ToBase64String(g.Cover);
+                                                <img src="data:image/jpeg;base64,@b64" alt="@g.Title" class="game-cover-sm" />
+                                            }
+                                            else
+                                            {
+                                                <span style="font-size: 11px; color: var(--secondary-color);">No image</span>
+                                            }
+                                        </td>
+                                        <td><strong>@g.Title</strong></td>
+                                        <td>@g.Genre</td>
+                                        <td>$@g.Price.ToString("N2")</td>
+                                        <td>
+                                            <span style="font-weight: 800; color: var(--primary-color); background-color: #eff6ff; padding: 4px 10px; border-radius: 20px; font-size: 13px;">
+                                                @g.PurchaseCount sold
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    rank++;
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+
+    <!-- Client-Side Navigation and Tab Logic -->
+    <script>
+        function toggleDetails(tabName) {
+            const panel = document.getElementById('details-panel');
+            const tabs = ['balance', 'users', 'blocked', 'games'];
+            const cards = ['card-balance', 'card-users', 'card-blocked', 'card-games'];
+            
+            // Check if clicked card's tab is already active
+            const isTabActive = document.getElementById('tab-' + tabName).classList.contains('active');
+            const isPanelVisible = panel.style.display !== 'none';
+            
+            if (isTabActive && isPanelVisible) {
+                // If already active, close the panel
+                closeDetails();
+                return;
+            }
+
+            // Update title text
+            let title = "Breakdown Details";
+            if (tabName === 'balance') title = "Balance Show – Wallet Breakdown";
+            else if (tabName === 'users') title = "Registered Customer Accounts";
+            else if (tabName === 'blocked') title = "Blocked Users Accounts";
+            else if (tabName === 'games') title = "Game Catalogue Preview";
+            
+            document.getElementById('details-title-text').innerText = title;
+
+            // Deactivate all cards and tabs
+            cards.forEach(card => {
+                document.getElementById(card).classList.remove('active');
+            });
+            tabs.forEach(tab => {
+                document.getElementById('tab-' + tab).classList.remove('active');
+            });
+
+            // Activate target card and tab
+            document.getElementById('card-' + tabName).classList.add('active');
+            document.getElementById('tab-' + tabName).classList.add('active');
+            
+            // Show details panel
+            panel.style.display = 'block';
+            panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+
+        function closeDetails() {
+            document.getElementById('details-panel').style.display = 'none';
+            const cards = ['card-balance', 'card-users', 'card-blocked', 'card-games'];
+            cards.forEach(card => {
+                document.getElementById(card).classList.remove('active');
+            });
+        }
+    </script>
+</body>
+</html>

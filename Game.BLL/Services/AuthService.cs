@@ -21,12 +21,20 @@ namespace Game.BLL.Services
             {
                 return false;
             }
+
+            string role = "Customer";
+            if (!_userRepo.AdminExists())
+            {
+                role = string.Equals(dto.Role, "Admin", StringComparison.OrdinalIgnoreCase) ? "Admin" : "Customer";
+            }
+
             var user = new User
             {
                 Name = dto.Name,
                 Email = dto.Email,
                 Password = dto.Password,
-                Role = "Customer"
+                Role = role,
+                IsActive = 1
             };
             return _userRepo.Create(user);
         }
@@ -36,6 +44,10 @@ namespace Game.BLL.Services
             if (user == null || user.Password != dTO.Password)
             {
                 return null;
+            }
+            if (user.IsActive == 0)
+            {
+                return "BLOCKED";
             }
             var token = Guid.NewGuid().ToString();
             user.Token = token;
@@ -52,6 +64,11 @@ namespace Game.BLL.Services
             var u = _userRepo.GetByToken(token);
             return u?.Name;
         }
+        public string? GetRoleByToken(string token)
+        {
+            var u = _userRepo.GetByToken(token);
+            return u?.Role;
+        }
         public void Logout(string token)
         {
             var u = _userRepo.GetByToken(token);
@@ -60,6 +77,10 @@ namespace Game.BLL.Services
                 u.Token = null;
                 _userRepo.Update(u);
             }
+        }
+        public bool AdminExists()
+        {
+            return _userRepo.AdminExists();
         }
     }
 }

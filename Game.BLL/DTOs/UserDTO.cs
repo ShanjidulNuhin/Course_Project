@@ -10,5 +10,7 @@ namespace Game.BLL.DTOs
         public string? Name { get; set; }
         public string? Email { get; set; }
         public decimal? Blance { get; set; }
+        public string? Role { get; set; }
+        public int IsActive { get; set; } 
     }
 }

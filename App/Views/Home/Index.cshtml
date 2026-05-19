@@ -1,76 +1,45 @@
-﻿@model IEnumerable<Game.BLL.DTOs.GameDTO>
+@model IEnumerable<Game.BLL.DTOs.GameDTO>
 
 @{
     ViewData["Title"] = "Welcome to GameSP";
 }
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
-<div class="container">
-    <a class="navbar-brand fw-bold text-warning" asp-controller="Home" asp-action="Index">
-        🎮 GameSP
-    </a>
 
-    <div class="ms-auto">
-        <a asp-controller="Auth"
-           asp-action="Login"
-           class="btn btn-outline-light me-2 rounded-pill px-4">
-            Login
-        </a>
+<div>
+    <h2>Welcome to GameSP!</h2>
+    <p>Explore and get your favorite games.</p>
+    <hr />
 
-        <a asp-controller="Auth"
-           asp-action="Register"
-           class="btn btn-warning rounded-pill px-4 fw-bold">
-            Register
-        </a>
-    </div>
-</div>
-</nav>
-<div class="container mt-5">
-    <div class="jumbotron text-center bg-light p-5 rounded mb-5 shadow-sm">
-        <h1 class="display-4 fw-bold text-primary">Welcome to GameSP!</h1>
-        <p class="lead text-secondary">Explore and get your favorite games.</p>
-        <hr class="my-4">
-    </div>
-
-    <h2 class="mb-4 text-secondary fw-bold">Available Games</h2>
+    <h3>Available Games</h3>
 
     @if (Model == null || !Model.Any())
     {
-        <div class="alert alert-info text-center p-5 rounded shadow-sm" role="alert">
-            <h4 class="alert-heading fw-bold">No games available right now!</h4>
-            <p class="mb-0 text-muted">Please check back later. Admin hasn't added any games to the store yet.</p>
-        </div>
+        <p>No games available right now. Please check back later.</p>
     }
     else
     {
-        <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="game-grid">
             @foreach (var game in Model)
             {
-                <div class="col">
-                    <div class="card h-100 shadow-sm border-0">
-
-                        @if (game.Cover != null && game.Cover.Length > 0)
-                        {
-                            var base64 = Convert.ToBase64String(game.Cover);
-                            var imgSrc = $"data:image/jpeg;base64,{base64}";
-                            <img src="@imgSrc" class="card-img-top rounded-top" alt="@game.Title" style="height: 250px; object-fit: cover;" />
-                        }
-                        else
-                        {
-                            <img src="https://via.placeholder.com/300x250?text=No+Game+Cover" class="card-img-top rounded-top" alt="No Image" style="height: 250px; object-fit: cover;" />
-                        }
-
-                        <div class="card-body">
-                            <h5 class="card-title fw-bold text-dark mb-1">@game.Title</h5>
-                            <span class="badge bg-secondary mb-3">@game.Genre</span>
-                            <p class="card-text text-muted" style="font-size: 0.9rem; line-height: 1.4;">
-                                @(game.Description?.Length > 100 ? game.Description.Substring(0, 100) + "..." : game.Description)
-                            </p>
+                <div class="game-card">
+                    @if (game.Cover != null && game.Cover.Length > 0)
+                    {
+                        var base64 = Convert.ToBase64String(game.Cover);
+                        var imgSrc = $"data:image/jpeg;base64,{base64}";
+                        <img src="@imgSrc" alt="@game.Title" class="game-card-img" />
+                    }
+                    else
+                    {
+                        <div class="game-card-no-img">
+                            No Cover Image
                         </div>
-                        <div class="card-footer bg-white border-top-0 d-flex justify-content-between align-items-center pb-3">
-                            <span class="fs-5 fw-bold text-success">$@game.Price</span>
-                            <a asp-controller="Auth" asp-action="Login" class="btn btn-sm btn-outline-primary px-3 rounded-pill">View Details</a>
-                        </div>
-                    </div>
+                    }
+
+                    <h4>@game.Title</h4>
+                    <p>Genre: @game.Genre</p>
+                    <div class="price">$@game.Price.ToString("N2")</div>
+                    <p style="margin: 0;">
+                        <a asp-controller="Home" asp-action="Details" asp-route-id="@game.Id" class="btn btn-wishlist" style="width: 100%; box-sizing: border-box;">View Details</a>
+                    </p>
                 </div>
             }
         </div>

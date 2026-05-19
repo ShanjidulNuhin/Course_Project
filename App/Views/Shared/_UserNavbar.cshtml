@@ -1,0 +1,414 @@
+@inject Game.DAL.Repos.UserRepository UserRepository
+@{
+    var token = Context.Request.Cookies["AuthToken"];
+    Game.DAL.EF.Tables.User? user = null;
+    if (token != null)
+    {
+        user = UserRepository.GetByToken(token);
+    }
+}
+
+
+<style>
+    .nav-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #e2e8f0;
+        padding: 12px 24px;
+        background: #ffffff;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        border-radius: 8px;
+        margin-bottom: 20px;
+    }
+    .logo-btn {
+        background: transparent;
+        border: none;
+        font-size: 22px;
+        font-weight: 800;
+        color: #4f46e5;
+        cursor: pointer;
+        padding: 4px 8px;
+        transition: all 0.2s ease;
+    }
+    .logo-btn:hover {
+        color: #4338ca;
+        transform: scale(1.02);
+    }
+    .nav-actions {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+    .nav-user-info {
+        font-size: 14px;
+        color: #475569;
+        font-weight: 600;
+        background: #f8fafc;
+        padding: 8px 16px;
+        border-radius: 8px;
+        border: 1px solid #e2e8f0;
+        margin-right: 8px;
+    }
+    .nav-btn {
+        background-color: transparent;
+        border: 1px solid #e2e8f0;
+        font-size: 14px;
+        font-weight: 600;
+        color: #475569;
+        cursor: pointer;
+        padding: 8px 16px;
+        border-radius: 8px;
+        transition: all 0.2s ease;
+    }
+    .nav-btn:hover {
+        background-color: #f1f5f9;
+        color: #4f46e5;
+        border-color: #cbd5e1;
+    }
+    .nav-btn-primary {
+        background-color: #4f46e5;
+        color: #ffffff;
+        border-color: #4f46e5;
+    }
+    .nav-btn-primary:hover {
+        background-color: #4338ca;
+        color: #ffffff;
+        border-color: #4338ca;
+    }
+    .nav-btn-logout {
+        background-color: #fff5f5;
+        color: #ef4444;
+        border-color: #fee2e2;
+    }
+    .nav-btn-logout:hover {
+        background-color: #fee2e2;
+        color: #b91c1c;
+        border-color: #fca5a5;
+    }
+
+    /* Notifications CSS */
+    .notification-container {
+        position: relative;
+        display: inline-block;
+    }
+    .notification-bell-btn {
+        background: transparent;
+        border: 1px solid #e2e8f0;
+        color: #475569;
+        padding: 8px;
+        border-radius: 8px;
+        cursor: pointer;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.2s ease;
+        height: 38px;
+        width: 38px;
+    }
+    .notification-bell-btn:hover {
+        background-color: #f1f5f9;
+        color: #4f46e5;
+        border-color: #cbd5e1;
+    }
+    .bell-icon {
+        transition: transform 0.2s ease;
+    }
+    .notification-bell-btn:hover .bell-icon {
+        transform: rotate(15deg);
+    }
+    .notification-badge {
+        position: absolute;
+        top: -4px;
+        right: -4px;
+        background-color: #ef4444;
+        color: white;
+        font-size: 10px;
+        font-weight: 700;
+        border-radius: 9999px;
+        padding: 2px 6px;
+        border: 2px solid white;
+        min-width: 18px;
+        text-align: center;
+        box-shadow: 0 2px 4px rgba(239, 68, 68, 0.3);
+        animation: pulse 2s infinite;
+    }
+
+    @@keyframes pulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.1); }
+        100% { transform: scale(1); }
+    }
+
+    .notification-dropdown {
+        display: none;
+        position: absolute;
+        right: 0;
+        top: calc(100% + 8px);
+        width: 320px;
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(226, 232, 240, 0.8);
+        border-radius: 12px;
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+        overflow: hidden;
+        animation: slideDown 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .notification-dropdown.active {
+        display: block;
+    }
+
+    @@keyframes slideDown {
+        from {
+            opacity: 0;
+            transform: translateY(-8px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .notification-header {
+        padding: 12px 16px;
+        border-bottom: 1px solid #e2e8f0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #f8fafc;
+    }
+    .notification-header span {
+        font-weight: 700;
+        color: #1e293b;
+        font-size: 14px;
+    }
+    .mark-read-btn {
+        background: transparent;
+        border: none;
+        color: #4f46e5;
+        font-size: 12px;
+        font-weight: 600;
+        cursor: pointer;
+        padding: 2px 6px;
+        border-radius: 4px;
+        transition: all 0.2s ease;
+    }
+    .mark-read-btn:hover {
+        background-color: #e0e7ff;
+        color: #4338ca;
+    }
+    .notification-list {
+        max-height: 280px;
+        overflow-y: auto;
+    }
+    .notification-item {
+        padding: 12px 16px;
+        border-bottom: 1px solid #f1f5f9;
+        font-size: 13px;
+        color: #475569;
+        line-height: 1.4;
+        transition: background-color 0.2s ease;
+        cursor: default;
+        text-align: left;
+    }
+    .notification-item:hover {
+        background-color: #f8fafc;
+    }
+    .notification-item.unread {
+        background-color: #eff6ff;
+        border-left: 3px solid #3b82f6;
+    }
+    .notification-item.unread:hover {
+        background-color: #dbeafe;
+    }
+    .notification-time {
+        display: block;
+        font-size: 11px;
+        color: #94a3b8;
+        margin-top: 4px;
+    }
+    .notification-empty {
+        padding: 24px 16px;
+        text-align: center;
+        color: #94a3b8;
+        font-size: 13px;
+    }
+    .notification-loading {
+        padding: 16px;
+        text-align: center;
+        color: #64748b;
+        font-size: 13px;
+    }
+</style>
+
+<div>
+    <div class="nav-container">
+        <button onclick="window.location.href='@(user != null ? Url.Action("Index", "User") : Url.Action("Index", "Home"))'" class="logo-btn">
+            GameSP
+        </button>
+
+        <div class="nav-actions">
+            @if (user != null)
+            {
+                <span class="nav-user-info">
+                    User: @user.Name | Wallet: $@(user.Blance?.ToString("N2") ?? "0.00")
+                </span>
+                
+                <div class="notification-container">
+                    <button class="notification-bell-btn" id="bellBtn" aria-label="Notifications">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="bell-icon">
+                            <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                            <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+                        </svg>
+                        <span class="notification-badge" id="unreadBadge" style="display: none;">0</span>
+                    </button>
+
+                    <div class="notification-dropdown" id="notificationDropdown">
+                        <div class="notification-header">
+                            <span>Notifications</span>
+                            <button class="mark-read-btn" id="markReadBtn">Mark all as read</button>
+                        </div>
+                        <div class="notification-list" id="notificationList">
+                            <div class="notification-loading">Loading...</div>
+                        </div>
+                    </div>
+                </div>
+
+                <button onclick="window.location.href='@Url.Action("Index", "User")'" class="nav-btn">Home</button>
+                <button onclick="window.location.href='@Url.Action("Profile", "User")'" class="nav-btn">Profile</button>
+                <button onclick="window.location.href='@Url.Action("Library", "User")'" class="nav-btn">Library</button>
+                <button onclick="window.location.href='@Url.Action("Balance", "User")'" class="nav-btn">Balance</button>
+                @if (user.Role == "Admin")
+                {
+                    <button onclick="window.location.href='@Url.Action("Index", "Admin")'" class="nav-btn nav-btn-primary">Admin Dashboard</button>
+                }
+                <button onclick="window.location.href='@Url.Action("Logout", "Auth")'" class="nav-btn nav-btn-logout">Logout</button>
+            }
+            else
+            {
+                <button onclick="window.location.href='@Url.Action("Index", "Home")'" class="nav-btn">Home</button>
+                <button onclick="window.location.href='@Url.Action("Login", "Auth")'" class="nav-btn nav-btn-primary">Login</button>
+                <button onclick="window.location.href='@Url.Action("Register", "Auth")'" class="nav-btn">Register</button>
+            }
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const bellBtn = document.getElementById('bellBtn');
+        const dropdown = document.getElementById('notificationDropdown');
+        const unreadBadge = document.getElementById('unreadBadge');
+        const notificationList = document.getElementById('notificationList');
+        const markReadBtn = document.getElementById('markReadBtn');
+
+        if (!bellBtn) return;
+
+        // Toggle dropdown
+        bellBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            dropdown.classList.toggle('active');
+            if (dropdown.classList.contains('active')) {
+                loadNotifications();
+            }
+        });
+
+        // Close when clicking outside
+        document.addEventListener('click', function(e) {
+            if (dropdown && !dropdown.contains(e.target) && e.target !== bellBtn && !bellBtn.contains(e.target)) {
+                dropdown.classList.remove('active');
+            }
+        });
+
+        // Mark all as read
+        markReadBtn.addEventListener('click', function() {
+            fetch('/Notification/MarkAllAsRead', { method: 'POST' })
+                .then(res => res.json())
+                .then(data => {
+                    if (data.success) {
+                        unreadBadge.style.display = 'none';
+                        unreadBadge.textContent = '0';
+                        loadNotifications();
+                    }
+                })
+                .catch(err => console.error("Error marking read:", err));
+        });
+
+        // Periodically check for new notifications (every 10 seconds)
+        function checkUnreadCount() {
+            fetch('/Notification/GetUnreadCount')
+                .then(res => res.json())
+                .then(data => {
+                    if (data.count > 0) {
+                        unreadBadge.textContent = data.count;
+                        unreadBadge.style.display = 'block';
+                    } else {
+                        unreadBadge.style.display = 'none';
+                    }
+                })
+                .catch(err => console.error("Error checking count:", err));
+        }
+
+        function loadNotifications() {
+            notificationList.innerHTML = '<div class="notification-loading">Loading...</div>';
+            fetch('/Notification/Get')
+                .then(res => res.json())
+                .then(data => {
+                    notificationList.innerHTML = '';
+                    if (!data.notifications || data.notifications.length === 0) {
+                        notificationList.innerHTML = '<div class="notification-empty">No notifications yet</div>';
+                        return;
+                    }
+
+                    data.notifications.forEach(item => {
+                        const div = document.createElement('div');
+                        div.className = 'notification-item' + (item.isRead ? '' : ' unread');
+                        
+                        const timeStr = formatTime(item.createdAt);
+                        div.innerHTML = `
+                            <div class="notification-text">${escapeHTML(item.message)}</div>
+                            <span class="notification-time">${timeStr}</span>
+                        `;
+                        notificationList.appendChild(div);
+                    });
+                })
+                .catch(err => {
+                    notificationList.innerHTML = '<div class="notification-empty">Failed to load notifications</div>';
+                    console.error("Error loading notifications:", err);
+                });
+        }
+
+        function formatTime(dateStr) {
+            const date = new Date(dateStr);
+            const now = new Date();
+            const diffMs = now - date;
+            const diffMins = Math.floor(diffMs / 60000);
+            
+            if (diffMins < 1) return 'Just now';
+            if (diffMins < 60) return `${diffMins}m ago`;
+            
+            const diffHours = Math.floor(diffMins / 60);
+            if (diffHours < 24) return `${diffHours}h ago`;
+            
+            return date.toLocaleDateString();
+        }
+
+        function escapeHTML(str) {
+            return str.replace(/[&<>'"]/g, 
+                tag => ({
+                    '&': '&amp;',
+                    '<': '&lt;',
+                    '>': '&gt;',
+                    "'": '&#39;',
+                    '"': '&quot;'
+                }[tag] || tag)
+            );
+        }
+
+        // Initial checks
+        checkUnreadCount();
+        setInterval(checkUnreadCount, 10000);
+    });
+</script>

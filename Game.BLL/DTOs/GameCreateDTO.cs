@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace BLL.DTOs
+namespace Game.BLL.DTOs
 {
     public class GameCreateDTO
     {

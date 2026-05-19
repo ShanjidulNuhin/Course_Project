@@ -29,7 +29,6 @@ F:\.Net\GameSep\Course_Project\App\obj\Debug\net10.0\rjsmcshtml.dswa.cache.json
 F:\.Net\GameSep\Course_Project\App\obj\Debug\net10.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 F:\.Net\GameSep\Course_Project\App\obj\Debug\net10.0\scopedcss\bundle\App.styles.css
 F:\.Net\GameSep\Course_Project\App\obj\Debug\net10.0\scopedcss\projectbundle\App.bundle.scp.css
-F:\.Net\GameSep\Course_Project\App\obj\Debug\net10.0\compressed\h9ikjdt7jm-{0}-b9sayid5wm-b9sayid5wm.gz
 F:\.Net\GameSep\Course_Project\App\obj\Debug\net10.0\compressed\79ocg1o0i1-{0}-61n19gt1b8-61n19gt1b8.gz
 F:\.Net\GameSep\Course_Project\App\obj\Debug\net10.0\compressed\wivm51wb2h-{0}-xtxxf3hu2r-xtxxf3hu2r.gz
 F:\.Net\GameSep\Course_Project\App\obj\Debug\net10.0\compressed\4v21ys4gpc-{0}-bqjiyaj88i-bqjiyaj88i.gz
@@ -91,8 +90,6 @@ F:\.Net\GameSep\Course_Project\App\obj\Debug\net10.0\compressed\yo4qkfy3sr-{0}-2
 F:\.Net\GameSep\Course_Project\App\obj\Debug\net10.0\compressed\65yg53d3xr-{0}-muycvpuwrr-muycvpuwrr.gz
 F:\.Net\GameSep\Course_Project\App\obj\Debug\net10.0\compressed\78mmvq35p5-{0}-87fc7y1x7t-87fc7y1x7t.gz
 F:\.Net\GameSep\Course_Project\App\obj\Debug\net10.0\compressed\m8vnp5mxvw-{0}-mlv21k5csn-mlv21k5csn.gz
-F:\.Net\GameSep\Course_Project\App\obj\Debug\net10.0\compressed\3vtmkcxrfs-{0}-29uwlm3fhq-29uwlm3fhq.gz
-F:\.Net\GameSep\Course_Project\App\obj\Debug\net10.0\compressed\vh6l543gvz-{0}-29uwlm3fhq-29uwlm3fhq.gz
 F:\.Net\GameSep\Course_Project\App\obj\Debug\net10.0\staticwebassets.build.json
 F:\.Net\GameSep\Course_Project\App\obj\Debug\net10.0\staticwebassets.build.json.cache
 F:\.Net\GameSep\Course_Project\App\obj\Debug\net10.0\staticwebassets.development.json
@@ -145,4 +142,7 @@ F:\.Net\GameSep\Course_Project\App\bin\Debug\net10.0\Game.BLL.dll
 F:\.Net\GameSep\Course_Project\App\bin\Debug\net10.0\Game.DAL.dll
 F:\.Net\GameSep\Course_Project\App\bin\Debug\net10.0\Game.BLL.pdb
 F:\.Net\GameSep\Course_Project\App\bin\Debug\net10.0\Game.DAL.pdb
+F:\.Net\GameSep\Course_Project\App\obj\Debug\net10.0\compressed\3vtmkcxrfs-{0}-160e4migfs-160e4migfs.gz
+F:\.Net\GameSep\Course_Project\App\obj\Debug\net10.0\compressed\vh6l543gvz-{0}-160e4migfs-160e4migfs.gz
+F:\.Net\GameSep\Course_Project\App\obj\Debug\net10.0\compressed\h9ikjdt7jm-{0}-gd2pr2tuao-gd2pr2tuao.gz
 F:\.Net\GameSep\Course_Project\App\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt

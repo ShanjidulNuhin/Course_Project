@@ -1,0 +1,91 @@
+@model IEnumerable<Game.BLL.DTOs.GameDTO>
+@{
+    ViewData["Title"] = "Manage Games";
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Manage Games – GameSP Admin</title>
+</head>
+<body>
+    <div style="display: flex; gap: 20px;">
+        <div style="width: 200px; border-right: 1px solid #ccc; padding-right: 20px; display: flex; flex-direction: column; gap: 10px;">
+            <h3>GameSP Admin</h3>
+            <button onclick="window.location.href='/User/Index'" style="padding: 8px; cursor: pointer; text-align: left; background: #f0f0f0; border: 1px solid #ccc; border-radius: 4px; font-weight: bold; width: 100%;">Home</button>
+            <button onclick="window.location.href='/Admin/Index'" style="padding: 8px; cursor: pointer; text-align: left; background: #f0f0f0; border: 1px solid #ccc; border-radius: 4px; font-weight: bold; width: 100%;">Dashboard</button>
+            <button onclick="window.location.href='/Admin/Games'" style="padding: 8px; cursor: pointer; text-align: left; background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 4px; font-weight: bold; width: 100%; color: #4f46e5;">Manage Games</button>
+            <button onclick="window.location.href='/Admin/AddGame'" style="padding: 8px; cursor: pointer; text-align: left; background: #f0f0f0; border: 1px solid #ccc; border-radius: 4px; font-weight: bold; width: 100%;">Add Game</button>
+            <button onclick="window.location.href='/Admin/Users'" style="padding: 8px; cursor: pointer; text-align: left; background: #f0f0f0; border: 1px solid #ccc; border-radius: 4px; font-weight: bold; width: 100%;">Manage Users</button>
+            <hr style="margin: 5px 0; border: none; border-top: 1px solid #ccc; width: 100%;" />
+            <button onclick="window.location.href='/Auth/Logout'" style="padding: 8px; cursor: pointer; text-align: left; background: #fee; border: 1px solid #ecc; border-radius: 4px; font-weight: bold; width: 100%; color: #c00;">Logout</button>
+        </div>
+        <div>
+            @if (TempData["Success"] != null)
+            {
+                <p style="color: green; font-weight: bold;">@TempData["Success"]</p>
+            }
+            @if (TempData["Error"] != null)
+            {
+                <p style="color: red; font-weight: bold;">@TempData["Error"]</p>
+            }
+
+            <h2>Game Library</h2>
+            <p>@Model.Count() games in the store | <button onclick="window.location.href='/Admin/AddGame'" style="padding: 4px 8px; cursor: pointer; font-size: 13px; font-weight: bold; border-radius: 4px; border: 1px solid #ccc; background-color: #fff;">+ Add New Game</button></p>
+            <hr />
+
+            @if (!Model.Any())
+            {
+                <p>No games yet. <button onclick="window.location.href='/Admin/AddGame'" style="padding: 4px 8px; cursor: pointer; font-size: 13px; font-weight: bold; border-radius: 4px; border: 1px solid #ccc; background-color: #fff;">Add the first one</button></p>
+            }
+            else
+            {
+                <table border="1" cellpadding="5" style="border-collapse: collapse; width: 100%;">
+                    <thead>
+                        <tr>
+                            <th>Cover</th>
+                            <th>Title</th>
+                            <th>Genre</th>
+                            <th>Price</th>
+                            <th>Description</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var game in Model)
+                        {
+                            <tr>
+                                <td>
+                                    @if (game.Cover != null && game.Cover.Length > 0)
+                                    {
+                                        var b64 = Convert.ToBase64String(game.Cover);
+                                        <img src="data:image/jpeg;base64,@b64" alt="@game.Title" style="max-height: 50px;" />
+                                    }
+                                    else
+                                    {
+                                        <span>No image</span>
+                                    }
+                                </td>
+                                <td><strong>@game.Title</strong></td>
+                                <td>@game.Genre</td>
+                                <td>$@game.Price</td>
+                                <td>@game.Description</td>
+                                <td>
+                                    <button onclick="window.location.href='/Admin/EditGame/@game.Id'" style="padding: 4px 8px; cursor: pointer; font-size: 12px; font-weight: bold; border-radius: 4px; border: 1px solid #ccc; background-color: #fff; margin-right: 4px;">Edit</button>
+                                    |
+                                    <form method="post" action="/Admin/DeleteGame/@game.Id" style="display:inline;"
+                                          onsubmit="return confirm('Delete @game.Title?');">
+                                        @Html.AntiForgeryToken()
+                                        <button type="submit">Delete</button>
+                                    </form>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            }
+        </div>
+    </div>
+</body>
+</html>

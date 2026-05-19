@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using Game.DAL.EF.Tables;
 using Microsoft.EntityFrameworkCore;
@@ -21,6 +21,8 @@ public partial class GameSpdbContext : DbContext
     public virtual DbSet<Order> Orders { get; set; }
     public virtual DbSet<User> Users { get; set; }
     public virtual DbSet<Library> Libraries { get; set; }
+    public virtual DbSet<Notification> Notifications { get; set; }
+    public virtual DbSet<NotificationReadState> NotificationReadStates { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
@@ -33,21 +35,16 @@ public partial class GameSpdbContext : DbContext
         {
             entity.ToTable("Game");
 
-            entity.Property(e => e.Id).ValueGeneratedNever();
+            entity.Property(e => e.Id).ValueGeneratedOnAdd();
             entity.Property(e => e.Description).HasMaxLength(50);
             entity.Property(e => e.Genre).HasMaxLength(50);
             entity.Property(e => e.Price).HasColumnType("decimal(18, 0)");
             entity.Property(e => e.Title).HasMaxLength(50);
-
-            // ডাটাবেজের নতুন Cover কলামটি যোগ করা হলো
             entity.Property(e => e.Cover).HasColumnType("image");
         });
-
-        // 2. Order Entity Configuration
-        // (আপনার রিকোয়ারমেন্ট অনুযায়ী Orders টেবিলের UserId-কে Users টেবিলের Id এর সাথে রিলেশন করা হলো)
         modelBuilder.Entity<Order>(entity =>
         {
-            entity.Property(e => e.Id).ValueGeneratedNever();
+            entity.Property(e => e.Id).ValueGeneratedOnAdd();
             entity.Property(e => e.TotalPrice).HasColumnType("decimal(18, 0)");
 
             entity.HasOne(d => d.User)           // প্রতিটি অর্ডারের একজন User থাকবে
@@ -59,13 +56,14 @@ public partial class GameSpdbContext : DbContext
         // 3. User Entity Configuration
         modelBuilder.Entity<User>(entity =>
         {
-            entity.Property(e => e.Id).ValueGeneratedNever();
+            entity.Property(e => e.Id).ValueGeneratedOnAdd();
             entity.Property(e => e.Name).HasMaxLength(50);
             entity.Property(e => e.Email).HasMaxLength(50);
             entity.Property(e => e.Password).HasMaxLength(50);
             entity.Property(e => e.Role).HasMaxLength(50);
             entity.Property(e =>e.Token).HasMaxLength(200);
-            entity.Property(e=>e.Blance).HasColumnType("decimal(18,2");
+            entity.Property(e=>e.Blance).HasColumnType("decimal(18,2)");
+            entity.Property(e => e.IsActive).HasDefaultValue(1);
         });
 
         // 4. Library Entity Configuration
@@ -73,7 +71,7 @@ public partial class GameSpdbContext : DbContext
         {
             entity.ToTable("Library");
 
-            entity.Property(e => e.Id).ValueGeneratedNever();
+            entity.Property(e => e.Id).ValueGeneratedOnAdd();
             entity.Property(e => e.Cart_Type).HasMaxLength(50);
 
             // User টেবিলের সাথে One-to-Many রিলেশন (d.Users থেকে d.User করা হয়েছে)
@@ -89,6 +87,30 @@ public partial class GameSpdbContext : DbContext
                 .HasConstraintName("FK_Library_Game");
 
             // এখানে থাকা অতিরিক্ত ও ভুল অর্ডার ম্যাপিংটি সম্পূর্ণ মুছে দেওয়া হয়েছে।
+        });
+
+        modelBuilder.Entity<Notification>(entity =>
+        {
+            entity.ToTable("Notifications");
+            entity.Property(e => e.Id).ValueGeneratedOnAdd();
+            entity.Property(e => e.Message).IsRequired();
+            entity.Property(e => e.CreatedAt).HasDefaultValueSql("GETUTCDATE()");
+        });
+
+        modelBuilder.Entity<NotificationReadState>(entity =>
+        {
+            entity.ToTable("NotificationReadStates");
+            entity.Property(e => e.Id).ValueGeneratedOnAdd();
+
+            entity.HasOne(d => d.User)
+                .WithMany()
+                .HasForeignKey(d => d.UserId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            entity.HasOne(d => d.Notification)
+                .WithMany()
+                .HasForeignKey(d => d.NotificationId)
+                .OnDelete(DeleteBehavior.Cascade);
         });
 
         OnModelCreatingPartial(modelBuilder);

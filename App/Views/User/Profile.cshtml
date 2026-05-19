@@ -1,10 +1,63 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
-<h2>Profile Page</h2>
+@model Game.DAL.EF.Tables.User
 
-<p>
-    User/Admin can update profile here.
-</p>
+@{
+    ViewData["Title"] = "User Profile";
+}
+<div>
+    <h2>User Profile</h2>
+
+    @if (TempData["Success"] != null)
+    {
+        <p style="color: green; font-weight: bold;">@TempData["Success"]</p>
+    }
+    @if (TempData["Error"] != null)
+    {
+        <p style="color: red; font-weight: bold;">@TempData["Error"]</p>
+    }
+    <div>
+        <h3>Profile Overview</h3>
+        <p><strong>Name:</strong> @Model.Name</p>
+        <p><strong>Email:</strong> @Model.Email</p>
+        <p><strong>Role:</strong> @Model.Role</p>
+        <p><strong>Wallet Balance:</strong> $@(Model.Blance?.ToString("N2") ?? "0.00")</p>
+    </div>
+    <hr />
+    <div>
+        <h3>Update Profile Details</h3>
+        <form method="post" asp-controller="User" asp-action="UpdateProfile">
+            <div>
+                <label>Full Name:</label><br />
+                <input type="text" name="name" value="@Model.Name" required />
+            </div>
+            <br />
+            <div>
+                <label>Email Address:</label><br />
+                <input type="email" name="email" value="@Model.Email" required />
+            </div>
+            <br />
+            <div>
+                <label>New Password (Leave blank to keep current):</label><br />
+                <input type="password" name="newPassword" placeholder="••••••••" />
+            </div>
+            <br />
+            <div style="border: 1px solid #ccc; padding: 10px; margin-bottom: 10px;">
+                <label><strong>Verification Password Required:</strong></label><br />
+                <p>Enter your current password to save changes:</p>
+                <input type="password" name="currentPassword" required />
+            </div>
+            <button type="submit">Save Changes</button>
+        </form>
+    </div>
+    <hr />
+    <div style="border: 1px solid red; padding: 15px; margin-top: 20px;">
+        <form method="post" asp-controller="User" asp-action="DeleteAccount">
+            <button type="submit" style="color: red;" onclick="return confirm('Are you absolutely sure you want to permanently delete your account? This cannot be undone.');">
+                Delete Acount
+            </button>
+             <div>
+                <label>Enter your password to confirm deletion:</label><br />
+                <input type="password" name="currentPassword" required />
+            </div>
+        </form>
+    </div>
+</div>
