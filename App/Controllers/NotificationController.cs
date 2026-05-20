@@ -13,7 +13,6 @@ namespace App.Controllers
         {
             _notificationService = notificationService;
         }
-
         [HttpGet]
         public IActionResult GetUnreadCount()
         {
@@ -23,7 +22,6 @@ namespace App.Controllers
             var count = _notificationService.GetUnreadCount(token);
             return Json(new { count = count });
         }
-
         [HttpGet]
         public IActionResult Get()
         {
@@ -40,7 +38,6 @@ namespace App.Controllers
             });
             return Json(new { notifications = formatted });
         }
-
         [HttpPost]
         public IActionResult MarkAllAsRead()
         {

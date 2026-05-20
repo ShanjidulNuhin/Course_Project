@@ -3,52 +3,80 @@
   "WorkspaceRootPath": "F:\\.Net\\GameSep\\Course_Project\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{6C0F928A-B28D-D207-D239-598F22CCD0B7}|App\\App.csproj|f:\\.net\\gamesep\\course_project\\app\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6C0F928A-B28D-D207-D239-598F22CCD0B7}|App\\App.csproj|solutionrelative:app\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{DCE70D9C-534A-4ACA-B8B8-2DD11920E5DE}|Game.DAL\\Game.DAL.csproj|f:\\.net\\gamesep\\course_project\\game.dal\\repos\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DCE70D9C-534A-4ACA-B8B8-2DD11920E5DE}|Game.DAL\\Game.DAL.csproj|solutionrelative:game.dal\\repos\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DCE70D9C-534A-4ACA-B8B8-2DD11920E5DE}|Game.DAL\\Game.DAL.csproj|f:\\.net\\gamesep\\course_project\\game.dal\\repos\\gamerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DCE70D9C-534A-4ACA-B8B8-2DD11920E5DE}|Game.DAL\\Game.DAL.csproj|solutionrelative:game.dal\\repos\\gamerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DCE70D9C-534A-4ACA-B8B8-2DD11920E5DE}|Game.DAL\\Game.DAL.csproj|f:\\.net\\gamesep\\course_project\\game.dal\\ef\\tables\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DCE70D9C-534A-4ACA-B8B8-2DD11920E5DE}|Game.DAL\\Game.DAL.csproj|solutionrelative:game.dal\\ef\\tables\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C08B8594-AF07-4A44-A866-25A5D2E630F3}|Game.BLL\\Game.BLL.csproj|f:\\.net\\gamesep\\course_project\\game.bll\\services\\adminservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C08B8594-AF07-4A44-A866-25A5D2E630F3}|Game.BLL\\Game.BLL.csproj|solutionrelative:game.bll\\services\\adminservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C08B8594-AF07-4A44-A866-25A5D2E630F3}|Game.BLL\\Game.BLL.csproj|f:\\.net\\gamesep\\course_project\\game.bll\\dtos\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C08B8594-AF07-4A44-A866-25A5D2E630F3}|Game.BLL\\Game.BLL.csproj|solutionrelative:game.bll\\dtos\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C08B8594-AF07-4A44-A866-25A5D2E630F3}|Game.BLL\\Game.BLL.csproj|f:\\.net\\gamesep\\course_project\\game.bll\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C08B8594-AF07-4A44-A866-25A5D2E630F3}|Game.BLL\\Game.BLL.csproj|solutionrelative:game.bll\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C08B8594-AF07-4A44-A866-25A5D2E630F3}|Game.BLL\\Game.BLL.csproj|f:\\.net\\gamesep\\course_project\\game.bll\\services\\notificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C08B8594-AF07-4A44-A866-25A5D2E630F3}|Game.BLL\\Game.BLL.csproj|solutionrelative:game.bll\\services\\notificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C08B8594-AF07-4A44-A866-25A5D2E630F3}|Game.BLL\\Game.BLL.csproj|f:\\.net\\gamesep\\course_project\\game.bll\\services\\gameservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C08B8594-AF07-4A44-A866-25A5D2E630F3}|Game.BLL\\Game.BLL.csproj|solutionrelative:game.bll\\services\\gameservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6C0F928A-B28D-D207-D239-598F22CCD0B7}|App\\App.csproj|f:\\.net\\gamesep\\course_project\\app\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6C0F928A-B28D-D207-D239-598F22CCD0B7}|App\\App.csproj|solutionrelative:app\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DCE70D9C-534A-4ACA-B8B8-2DD11920E5DE}|Game.DAL\\Game.DAL.csproj|f:\\.net\\gamesep\\course_project\\game.dal\\ef\\tables\\notificationreadstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DCE70D9C-534A-4ACA-B8B8-2DD11920E5DE}|Game.DAL\\Game.DAL.csproj|solutionrelative:game.dal\\ef\\tables\\notificationreadstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C08B8594-AF07-4A44-A866-25A5D2E630F3}|Game.BLL\\Game.BLL.csproj|f:\\.net\\gamesep\\course_project\\game.bll\\dtos\\userregisterdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C08B8594-AF07-4A44-A866-25A5D2E630F3}|Game.BLL\\Game.BLL.csproj|solutionrelative:game.bll\\dtos\\userregisterdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DCE70D9C-534A-4ACA-B8B8-2DD11920E5DE}|Game.DAL\\Game.DAL.csproj|f:\\.net\\gamesep\\course_project\\game.dal\\ef\\gamespdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DCE70D9C-534A-4ACA-B8B8-2DD11920E5DE}|Game.DAL\\Game.DAL.csproj|solutionrelative:game.dal\\ef\\gamespdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DCE70D9C-534A-4ACA-B8B8-2DD11920E5DE}|Game.DAL\\Game.DAL.csproj|f:\\.net\\gamesep\\course_project\\game.dal\\ef\\tables\\notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DCE70D9C-534A-4ACA-B8B8-2DD11920E5DE}|Game.DAL\\Game.DAL.csproj|solutionrelative:game.dal\\ef\\tables\\notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C08B8594-AF07-4A44-A866-25A5D2E630F3}|Game.BLL\\Game.BLL.csproj|f:\\.net\\gamesep\\course_project\\game.bll\\dtos\\gamecreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C08B8594-AF07-4A44-A866-25A5D2E630F3}|Game.BLL\\Game.BLL.csproj|solutionrelative:game.bll\\dtos\\gamecreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6C0F928A-B28D-D207-D239-598F22CCD0B7}|App\\App.csproj|f:\\.net\\gamesep\\course_project\\app\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6C0F928A-B28D-D207-D239-598F22CCD0B7}|App\\App.csproj|solutionrelative:app\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C08B8594-AF07-4A44-A866-25A5D2E630F3}|Game.BLL\\Game.BLL.csproj|f:\\.net\\gamesep\\course_project\\game.bll\\services\\adminservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C08B8594-AF07-4A44-A866-25A5D2E630F3}|Game.BLL\\Game.BLL.csproj|solutionrelative:game.bll\\services\\adminservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C08B8594-AF07-4A44-A866-25A5D2E630F3}|Game.BLL\\Game.BLL.csproj|f:\\.net\\gamesep\\course_project\\game.bll\\dtos\\viewordersdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C08B8594-AF07-4A44-A866-25A5D2E630F3}|Game.BLL\\Game.BLL.csproj|solutionrelative:game.bll\\dtos\\viewordersdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C08B8594-AF07-4A44-A866-25A5D2E630F3}|Game.BLL\\Game.BLL.csproj|f:\\.net\\gamesep\\course_project\\game.bll\\dtos\\ordersdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C08B8594-AF07-4A44-A866-25A5D2E630F3}|Game.BLL\\Game.BLL.csproj|solutionrelative:game.bll\\dtos\\ordersdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C08B8594-AF07-4A44-A866-25A5D2E630F3}|Game.BLL\\Game.BLL.csproj|f:\\.net\\gamesep\\course_project\\game.bll\\dtos\\userregisterdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C08B8594-AF07-4A44-A866-25A5D2E630F3}|Game.BLL\\Game.BLL.csproj|solutionrelative:game.bll\\dtos\\userregisterdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C08B8594-AF07-4A44-A866-25A5D2E630F3}|Game.BLL\\Game.BLL.csproj|f:\\.net\\gamesep\\course_project\\game.bll\\dtos\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C08B8594-AF07-4A44-A866-25A5D2E630F3}|Game.BLL\\Game.BLL.csproj|solutionrelative:game.bll\\dtos\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C08B8594-AF07-4A44-A866-25A5D2E630F3}|Game.BLL\\Game.BLL.csproj|f:\\.net\\gamesep\\course_project\\game.bll\\dtos\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C08B8594-AF07-4A44-A866-25A5D2E630F3}|Game.BLL\\Game.BLL.csproj|solutionrelative:game.bll\\dtos\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C08B8594-AF07-4A44-A866-25A5D2E630F3}|Game.BLL\\Game.BLL.csproj|f:\\.net\\gamesep\\course_project\\game.bll\\dtos\\libraryviewdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C08B8594-AF07-4A44-A866-25A5D2E630F3}|Game.BLL\\Game.BLL.csproj|solutionrelative:game.bll\\dtos\\libraryviewdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C08B8594-AF07-4A44-A866-25A5D2E630F3}|Game.BLL\\Game.BLL.csproj|f:\\.net\\gamesep\\course_project\\game.bll\\dtos\\gamedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C08B8594-AF07-4A44-A866-25A5D2E630F3}|Game.BLL\\Game.BLL.csproj|solutionrelative:game.bll\\dtos\\gamedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6C0F928A-B28D-D207-D239-598F22CCD0B7}|App\\App.csproj|f:\\.net\\gamesep\\course_project\\app\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{6C0F928A-B28D-D207-D239-598F22CCD0B7}|App\\App.csproj|solutionrelative:app\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6C0F928A-B28D-D207-D239-598F22CCD0B7}|App\\App.csproj|f:\\.net\\gamesep\\course_project\\app\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6C0F928A-B28D-D207-D239-598F22CCD0B7}|App\\App.csproj|solutionrelative:app\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6C0F928A-B28D-D207-D239-598F22CCD0B7}|App\\App.csproj|f:\\.net\\gamesep\\course_project\\app\\views\\auth\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6C0F928A-B28D-D207-D239-598F22CCD0B7}|App\\App.csproj|solutionrelative:app\\views\\auth\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6C0F928A-B28D-D207-D239-598F22CCD0B7}|App\\App.csproj|f:\\.net\\gamesep\\course_project\\app\\views\\auth\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6C0F928A-B28D-D207-D239-598F22CCD0B7}|App\\App.csproj|solutionrelative:app\\views\\auth\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6C0F928A-B28D-D207-D239-598F22CCD0B7}|App\\App.csproj|f:\\.net\\gamesep\\course_project\\app\\views\\admin\\users.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -71,36 +99,44 @@
       "RelativeMoniker": "D:0:0:{6C0F928A-B28D-D207-D239-598F22CCD0B7}|App\\App.csproj|solutionrelative:app\\views\\admin\\addgame.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6C0F928A-B28D-D207-D239-598F22CCD0B7}|App\\App.csproj|f:\\.net\\gamesep\\course_project\\app\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6C0F928A-B28D-D207-D239-598F22CCD0B7}|App\\App.csproj|solutionrelative:app\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6C0F928A-B28D-D207-D239-598F22CCD0B7}|App\\App.csproj|f:\\.net\\gamesep\\course_project\\app\\views\\auth\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{6C0F928A-B28D-D207-D239-598F22CCD0B7}|App\\App.csproj|solutionrelative:app\\views\\auth\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{6C0F928A-B28D-D207-D239-598F22CCD0B7}|App\\App.csproj|f:\\.net\\gamesep\\course_project\\app\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6C0F928A-B28D-D207-D239-598F22CCD0B7}|App\\App.csproj|solutionrelative:app\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6C0F928A-B28D-D207-D239-598F22CCD0B7}|App\\App.csproj|f:\\.net\\gamesep\\course_project\\app\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{6C0F928A-B28D-D207-D239-598F22CCD0B7}|App\\App.csproj|solutionrelative:app\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{6C0F928A-B28D-D207-D239-598F22CCD0B7}|App\\App.csproj|f:\\.net\\gamesep\\course_project\\app\\controllers\\notificationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6C0F928A-B28D-D207-D239-598F22CCD0B7}|App\\App.csproj|solutionrelative:app\\controllers\\notificationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C08B8594-AF07-4A44-A866-25A5D2E630F3}|Game.BLL\\Game.BLL.csproj|f:\\.net\\gamesep\\course_project\\game.bll\\dtos\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C08B8594-AF07-4A44-A866-25A5D2E630F3}|Game.BLL\\Game.BLL.csproj|solutionrelative:game.bll\\dtos\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6C0F928A-B28D-D207-D239-598F22CCD0B7}|App\\App.csproj|f:\\.net\\gamesep\\course_project\\app\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6C0F928A-B28D-D207-D239-598F22CCD0B7}|App\\App.csproj|solutionrelative:app\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6C0F928A-B28D-D207-D239-598F22CCD0B7}|App\\App.csproj|f:\\.net\\gamesep\\course_project\\app\\views\\auth\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{6C0F928A-B28D-D207-D239-598F22CCD0B7}|App\\App.csproj|solutionrelative:app\\views\\auth\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{6C0F928A-B28D-D207-D239-598F22CCD0B7}|App\\App.csproj|f:\\.net\\gamesep\\course_project\\app\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6C0F928A-B28D-D207-D239-598F22CCD0B7}|App\\App.csproj|solutionrelative:app\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6C0F928A-B28D-D207-D239-598F22CCD0B7}|App\\App.csproj|f:\\.net\\gamesep\\course_project\\app\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6C0F928A-B28D-D207-D239-598F22CCD0B7}|App\\App.csproj|solutionrelative:app\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DCE70D9C-534A-4ACA-B8B8-2DD11920E5DE}|Game.DAL\\Game.DAL.csproj|f:\\.net\\gamesep\\course_project\\game.dal\\repos\\gamerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DCE70D9C-534A-4ACA-B8B8-2DD11920E5DE}|Game.DAL\\Game.DAL.csproj|solutionrelative:game.dal\\repos\\gamerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DCE70D9C-534A-4ACA-B8B8-2DD11920E5DE}|Game.DAL\\Game.DAL.csproj|f:\\.net\\gamesep\\course_project\\game.dal\\ef\\tables\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DCE70D9C-534A-4ACA-B8B8-2DD11920E5DE}|Game.DAL\\Game.DAL.csproj|solutionrelative:game.dal\\ef\\tables\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C08B8594-AF07-4A44-A866-25A5D2E630F3}|Game.BLL\\Game.BLL.csproj|f:\\.net\\gamesep\\course_project\\game.bll\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C08B8594-AF07-4A44-A866-25A5D2E630F3}|Game.BLL\\Game.BLL.csproj|solutionrelative:game.bll\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DCE70D9C-534A-4ACA-B8B8-2DD11920E5DE}|Game.DAL\\Game.DAL.csproj|f:\\.net\\gamesep\\course_project\\game.dal\\ef\\gamespdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DCE70D9C-534A-4ACA-B8B8-2DD11920E5DE}|Game.DAL\\Game.DAL.csproj|solutionrelative:game.dal\\ef\\gamespdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C08B8594-AF07-4A44-A866-25A5D2E630F3}|Game.BLL\\Game.BLL.csproj|f:\\.net\\gamesep\\course_project\\game.bll\\game.bll.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{C08B8594-AF07-4A44-A866-25A5D2E630F3}|Game.BLL\\Game.BLL.csproj|solutionrelative:game.bll\\game.bll.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C08B8594-AF07-4A44-A866-25A5D2E630F3}|Game.BLL\\Game.BLL.csproj|f:\\.net\\gamesep\\course_project\\game.bll\\dtos\\libraryviewdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C08B8594-AF07-4A44-A866-25A5D2E630F3}|Game.BLL\\Game.BLL.csproj|solutionrelative:game.bll\\dtos\\libraryviewdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DCE70D9C-534A-4ACA-B8B8-2DD11920E5DE}|Game.DAL\\Game.DAL.csproj|f:\\.net\\gamesep\\course_project\\game.dal\\ef\\tables\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -119,28 +155,8 @@
       "RelativeMoniker": "D:0:0:{DCE70D9C-534A-4ACA-B8B8-2DD11920E5DE}|Game.DAL\\Game.DAL.csproj|solutionrelative:game.dal\\game.dal.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C08B8594-AF07-4A44-A866-25A5D2E630F3}|Game.BLL\\Game.BLL.csproj|f:\\.net\\gamesep\\course_project\\game.bll\\dtos\\viewordersdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C08B8594-AF07-4A44-A866-25A5D2E630F3}|Game.BLL\\Game.BLL.csproj|solutionrelative:game.bll\\dtos\\viewordersdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C08B8594-AF07-4A44-A866-25A5D2E630F3}|Game.BLL\\Game.BLL.csproj|f:\\.net\\gamesep\\course_project\\game.bll\\dtos\\ordersdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C08B8594-AF07-4A44-A866-25A5D2E630F3}|Game.BLL\\Game.BLL.csproj|solutionrelative:game.bll\\dtos\\ordersdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C08B8594-AF07-4A44-A866-25A5D2E630F3}|Game.BLL\\Game.BLL.csproj|f:\\.net\\gamesep\\course_project\\game.bll\\dtos\\gamedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C08B8594-AF07-4A44-A866-25A5D2E630F3}|Game.BLL\\Game.BLL.csproj|solutionrelative:game.bll\\dtos\\gamedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6C0F928A-B28D-D207-D239-598F22CCD0B7}|App\\App.csproj|f:\\.net\\gamesep\\course_project\\app\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6C0F928A-B28D-D207-D239-598F22CCD0B7}|App\\App.csproj|solutionrelative:app\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{6C0F928A-B28D-D207-D239-598F22CCD0B7}|App\\App.csproj|f:\\.net\\gamesep\\course_project\\app\\app.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{6C0F928A-B28D-D207-D239-598F22CCD0B7}|App\\App.csproj|solutionrelative:app\\app.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6C0F928A-B28D-D207-D239-598F22CCD0B7}|App\\App.csproj|f:\\.net\\gamesep\\course_project\\app\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{6C0F928A-B28D-D207-D239-598F22CCD0B7}|App\\App.csproj|solutionrelative:app\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DCE70D9C-534A-4ACA-B8B8-2DD11920E5DE}|Game.DAL\\Game.DAL.csproj|f:\\.net\\gamesep\\course_project\\game.dal\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -158,7 +174,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -170,33 +186,99 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
-            },
-            {
-              "$type": "Bookmark",
               "Name": "ST:0:0:{c9c0ae26-aa77-11d2-b3f0-0000f87570ee}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AdminService.cs",
-              "DocumentMoniker": "F:\\.Net\\GameSep\\Course_Project\\Game.BLL\\Services\\AdminService.cs",
-              "RelativeDocumentMoniker": "Game.BLL\\Services\\AdminService.cs",
-              "ToolTip": "F:\\.Net\\GameSep\\Course_Project\\Game.BLL\\Services\\AdminService.cs",
-              "RelativeToolTip": "Game.BLL\\Services\\AdminService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAG0AAAAMAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "NotificationReadState.cs",
+              "DocumentMoniker": "F:\\.Net\\GameSep\\Course_Project\\Game.DAL\\EF\\Tables\\NotificationReadState.cs",
+              "RelativeDocumentMoniker": "Game.DAL\\EF\\Tables\\NotificationReadState.cs",
+              "ToolTip": "F:\\.Net\\GameSep\\Course_Project\\Game.DAL\\EF\\Tables\\NotificationReadState.cs",
+              "RelativeToolTip": "Game.DAL\\EF\\Tables\\NotificationReadState.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-19T20:07:38.746Z"
+              "WhenOpened": "2026-05-20T04:32:22.29Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "NotificationService.cs",
+              "DocumentMoniker": "F:\\.Net\\GameSep\\Course_Project\\Game.BLL\\Services\\NotificationService.cs",
+              "RelativeDocumentMoniker": "Game.BLL\\Services\\NotificationService.cs",
+              "ToolTip": "F:\\.Net\\GameSep\\Course_Project\\Game.BLL\\Services\\NotificationService.cs",
+              "RelativeToolTip": "Game.BLL\\Services\\NotificationService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADQAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-20T04:19:48.014Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "OrdersDTO.cs",
+              "DocumentMoniker": "F:\\.Net\\GameSep\\Course_Project\\Game.BLL\\DTOs\\OrdersDTO.cs",
+              "RelativeDocumentMoniker": "Game.BLL\\DTOs\\OrdersDTO.cs",
+              "ToolTip": "F:\\.Net\\GameSep\\Course_Project\\Game.BLL\\DTOs\\OrdersDTO.cs",
+              "RelativeToolTip": "Game.BLL\\DTOs\\OrdersDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-18T08:14:40.059Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "UserDTO.cs",
+              "DocumentMoniker": "F:\\.Net\\GameSep\\Course_Project\\Game.BLL\\DTOs\\UserDTO.cs",
+              "RelativeDocumentMoniker": "Game.BLL\\DTOs\\UserDTO.cs",
+              "ToolTip": "F:\\.Net\\GameSep\\Course_Project\\Game.BLL\\DTOs\\UserDTO.cs",
+              "RelativeToolTip": "Game.BLL\\DTOs\\UserDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-18T08:08:11.719Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "GameService.cs",
+              "DocumentMoniker": "F:\\.Net\\GameSep\\Course_Project\\Game.BLL\\Services\\GameService.cs",
+              "RelativeDocumentMoniker": "Game.BLL\\Services\\GameService.cs",
+              "ToolTip": "F:\\.Net\\GameSep\\Course_Project\\Game.BLL\\Services\\GameService.cs",
+              "RelativeToolTip": "Game.BLL\\Services\\GameService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAALMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-18T08:41:05.512Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "F:\\.Net\\GameSep\\Course_Project\\App\\Program.cs",
+              "RelativeDocumentMoniker": "App\\Program.cs",
+              "ToolTip": "F:\\.Net\\GameSep\\Course_Project\\App\\Program.cs",
+              "RelativeToolTip": "App\\Program.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAACcAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-18T11:43:22.018Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "UserRepository.cs",
               "DocumentMoniker": "F:\\.Net\\GameSep\\Course_Project\\Game.DAL\\Repos\\UserRepository.cs",
               "RelativeDocumentMoniker": "Game.DAL\\Repos\\UserRepository.cs",
               "ToolTip": "F:\\.Net\\GameSep\\Course_Project\\Game.DAL\\Repos\\UserRepository.cs",
               "RelativeToolTip": "Game.DAL\\Repos\\UserRepository.cs",
-              "ViewState": "AgIAAF4AAAAAAAAAAIA8wDoAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-18T17:04:10.974Z",
               "EditorCaption": ""
@@ -204,54 +286,266 @@
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "AuthService.cs",
-              "DocumentMoniker": "F:\\.Net\\GameSep\\Course_Project\\Game.BLL\\Services\\AuthService.cs",
-              "RelativeDocumentMoniker": "Game.BLL\\Services\\AuthService.cs",
-              "ToolTip": "F:\\.Net\\GameSep\\Course_Project\\Game.BLL\\Services\\AuthService.cs",
-              "RelativeToolTip": "Game.BLL\\Services\\AuthService.cs",
-              "ViewState": "AgIAADUAAAAAAAAAAAAiwEMAAAAaAAAAAAAAAA==",
+              "Title": "Notification.cs",
+              "DocumentMoniker": "F:\\.Net\\GameSep\\Course_Project\\Game.DAL\\EF\\Tables\\Notification.cs",
+              "RelativeDocumentMoniker": "Game.DAL\\EF\\Tables\\Notification.cs",
+              "ToolTip": "F:\\.Net\\GameSep\\Course_Project\\Game.DAL\\EF\\Tables\\Notification.cs",
+              "RelativeToolTip": "Game.DAL\\EF\\Tables\\Notification.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-18T17:12:36.573Z"
+              "WhenOpened": "2026-05-20T04:38:52.221Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "UserRegisterDTO.cs",
+              "DocumentMoniker": "F:\\.Net\\GameSep\\Course_Project\\Game.BLL\\DTOs\\UserRegisterDTO.cs",
+              "RelativeDocumentMoniker": "Game.BLL\\DTOs\\UserRegisterDTO.cs",
+              "ToolTip": "F:\\.Net\\GameSep\\Course_Project\\Game.BLL\\DTOs\\UserRegisterDTO.cs",
+              "RelativeToolTip": "Game.BLL\\DTOs\\UserRegisterDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-18T08:09:25.86Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "GameService.cs",
-              "DocumentMoniker": "F:\\.Net\\GameSep\\Course_Project\\Game.BLL\\Services\\GameService.cs",
-              "RelativeDocumentMoniker": "Game.BLL\\Services\\GameService.cs",
-              "ToolTip": "F:\\.Net\\GameSep\\Course_Project\\Game.BLL\\Services\\GameService.cs",
-              "RelativeToolTip": "Game.BLL\\Services\\GameService.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAYwBMAAAAJAAAAAAAAAA==",
+              "Title": "GameCreateDTO.cs",
+              "DocumentMoniker": "F:\\.Net\\GameSep\\Course_Project\\Game.BLL\\DTOs\\GameCreateDTO.cs",
+              "RelativeDocumentMoniker": "Game.BLL\\DTOs\\GameCreateDTO.cs",
+              "ToolTip": "F:\\.Net\\GameSep\\Course_Project\\Game.BLL\\DTOs\\GameCreateDTO.cs",
+              "RelativeToolTip": "Game.BLL\\DTOs\\GameCreateDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAoAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-18T08:41:05.512Z"
+              "WhenOpened": "2026-05-18T08:06:27.222Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "UserDTO.cs",
-              "DocumentMoniker": "F:\\.Net\\GameSep\\Course_Project\\Game.BLL\\DTOs\\UserDTO.cs",
-              "RelativeDocumentMoniker": "Game.BLL\\DTOs\\UserDTO.cs",
-              "ToolTip": "F:\\.Net\\GameSep\\Course_Project\\Game.BLL\\DTOs\\UserDTO.cs",
-              "RelativeToolTip": "Game.BLL\\DTOs\\UserDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAApAAAAAAAAAA==",
+              "DocumentIndex": 8,
+              "Title": "ViewOrdersDTO.cs",
+              "DocumentMoniker": "F:\\.Net\\GameSep\\Course_Project\\Game.BLL\\DTOs\\ViewOrdersDTO.cs",
+              "RelativeDocumentMoniker": "Game.BLL\\DTOs\\ViewOrdersDTO.cs",
+              "ToolTip": "F:\\.Net\\GameSep\\Course_Project\\Game.BLL\\DTOs\\ViewOrdersDTO.cs",
+              "RelativeToolTip": "Game.BLL\\DTOs\\ViewOrdersDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-18T08:08:11.719Z"
+              "WhenOpened": "2026-05-18T08:15:56.538Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "User.cs",
-              "DocumentMoniker": "F:\\.Net\\GameSep\\Course_Project\\Game.DAL\\EF\\Tables\\User.cs",
-              "RelativeDocumentMoniker": "Game.DAL\\EF\\Tables\\User.cs",
-              "ToolTip": "F:\\.Net\\GameSep\\Course_Project\\Game.DAL\\EF\\Tables\\User.cs",
-              "RelativeToolTip": "Game.DAL\\EF\\Tables\\User.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAYwBIAAAAnAAAAAAAAAA==",
+              "DocumentIndex": 7,
+              "Title": "AdminService.cs",
+              "DocumentMoniker": "F:\\.Net\\GameSep\\Course_Project\\Game.BLL\\Services\\AdminService.cs",
+              "RelativeDocumentMoniker": "Game.BLL\\Services\\AdminService.cs",
+              "ToolTip": "F:\\.Net\\GameSep\\Course_Project\\Game.BLL\\Services\\AdminService.cs",
+              "RelativeToolTip": "Game.BLL\\Services\\AdminService.cs",
+              "ViewState": "AgIAAFkAAAAAAAAAAAAowG0AAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-18T07:16:09.73Z"
+              "WhenOpened": "2026-05-19T20:07:38.746Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 12,
+              "Title": "LoginDTO.cs",
+              "DocumentMoniker": "F:\\.Net\\GameSep\\Course_Project\\Game.BLL\\DTOs\\LoginDTO.cs",
+              "RelativeDocumentMoniker": "Game.BLL\\DTOs\\LoginDTO.cs",
+              "ToolTip": "F:\\.Net\\GameSep\\Course_Project\\Game.BLL\\DTOs\\LoginDTO.cs",
+              "RelativeToolTip": "Game.BLL\\DTOs\\LoginDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-18T17:09:21.239Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "LibraryViewDTO.cs",
+              "DocumentMoniker": "F:\\.Net\\GameSep\\Course_Project\\Game.BLL\\DTOs\\LibraryViewDTO.cs",
+              "RelativeDocumentMoniker": "Game.BLL\\DTOs\\LibraryViewDTO.cs",
+              "ToolTip": "F:\\.Net\\GameSep\\Course_Project\\Game.BLL\\DTOs\\LibraryViewDTO.cs",
+              "RelativeToolTip": "Game.BLL\\DTOs\\LibraryViewDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-18T08:10:44.592Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "GameDTO.cs",
+              "DocumentMoniker": "F:\\.Net\\GameSep\\Course_Project\\Game.BLL\\DTOs\\GameDTO.cs",
+              "RelativeDocumentMoniker": "Game.BLL\\DTOs\\GameDTO.cs",
+              "ToolTip": "F:\\.Net\\GameSep\\Course_Project\\Game.BLL\\DTOs\\GameDTO.cs",
+              "RelativeToolTip": "Game.BLL\\DTOs\\GameDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-18T08:02:09.418Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "F:\\.Net\\GameSep\\Course_Project\\App\\appsettings.json",
+              "RelativeDocumentMoniker": "App\\appsettings.json",
+              "ToolTip": "F:\\.Net\\GameSep\\Course_Project\\App\\appsettings.json",
+              "RelativeToolTip": "App\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-05-18T08:17:25.589Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "F:\\.Net\\GameSep\\Course_Project\\App\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "App\\Views\\Home\\Index.cshtml",
+              "ToolTip": "F:\\.Net\\GameSep\\Course_Project\\App\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "App\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAAC4AAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-18T10:08:32.334Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Register.cshtml",
+              "DocumentMoniker": "F:\\.Net\\GameSep\\Course_Project\\App\\Views\\Auth\\Register.cshtml",
+              "RelativeDocumentMoniker": "App\\Views\\Auth\\Register.cshtml",
+              "ToolTip": "F:\\.Net\\GameSep\\Course_Project\\App\\Views\\Auth\\Register.cshtml",
+              "RelativeToolTip": "App\\Views\\Auth\\Register.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-18T17:45:10.129Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "F:\\.Net\\GameSep\\Course_Project\\App\\Views\\Auth\\Login.cshtml",
+              "RelativeDocumentMoniker": "App\\Views\\Auth\\Login.cshtml",
+              "ToolTip": "F:\\.Net\\GameSep\\Course_Project\\App\\Views\\Auth\\Login.cshtml",
+              "RelativeToolTip": "App\\Views\\Auth\\Login.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-18T17:41:35.543Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Users.cshtml",
+              "DocumentMoniker": "F:\\.Net\\GameSep\\Course_Project\\App\\Views\\Admin\\Users.cshtml",
+              "RelativeDocumentMoniker": "App\\Views\\Admin\\Users.cshtml",
+              "ToolTip": "F:\\.Net\\GameSep\\Course_Project\\App\\Views\\Admin\\Users.cshtml",
+              "RelativeToolTip": "App\\Views\\Admin\\Users.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-19T20:01:58.776Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "F:\\.Net\\GameSep\\Course_Project\\App\\Views\\Admin\\Index.cshtml",
+              "RelativeDocumentMoniker": "App\\Views\\Admin\\Index.cshtml",
+              "ToolTip": "F:\\.Net\\GameSep\\Course_Project\\App\\Views\\Admin\\Index.cshtml",
+              "RelativeToolTip": "App\\Views\\Admin\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAPQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-19T20:01:27.6Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Games.cshtml",
+              "DocumentMoniker": "F:\\.Net\\GameSep\\Course_Project\\App\\Views\\Admin\\Games.cshtml",
+              "RelativeDocumentMoniker": "App\\Views\\Admin\\Games.cshtml",
+              "ToolTip": "F:\\.Net\\GameSep\\Course_Project\\App\\Views\\Admin\\Games.cshtml",
+              "RelativeToolTip": "App\\Views\\Admin\\Games.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-19T20:01:05.968Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "EditGame.cshtml",
+              "DocumentMoniker": "F:\\.Net\\GameSep\\Course_Project\\App\\Views\\Admin\\EditGame.cshtml",
+              "RelativeDocumentMoniker": "App\\Views\\Admin\\EditGame.cshtml",
+              "ToolTip": "F:\\.Net\\GameSep\\Course_Project\\App\\Views\\Admin\\EditGame.cshtml",
+              "RelativeToolTip": "App\\Views\\Admin\\EditGame.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-19T19:58:34.228Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "AddGame.cshtml",
+              "DocumentMoniker": "F:\\.Net\\GameSep\\Course_Project\\App\\Views\\Admin\\AddGame.cshtml",
+              "RelativeDocumentMoniker": "App\\Views\\Admin\\AddGame.cshtml",
+              "ToolTip": "F:\\.Net\\GameSep\\Course_Project\\App\\Views\\Admin\\AddGame.cshtml",
+              "RelativeToolTip": "App\\Views\\Admin\\AddGame.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFsAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-19T19:54:22.063Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "F:\\.Net\\GameSep\\Course_Project\\App\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "App\\Controllers\\UserController.cs",
+              "ToolTip": "F:\\.Net\\GameSep\\Course_Project\\App\\Controllers\\UserController.cs",
+              "RelativeToolTip": "App\\Controllers\\UserController.cs",
+              "ViewState": "AgIAAOEAAAAAAAAAAAAqwHoAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-18T18:09:00.219Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "NotificationController.cs",
+              "DocumentMoniker": "F:\\.Net\\GameSep\\Course_Project\\App\\Controllers\\NotificationController.cs",
+              "RelativeDocumentMoniker": "App\\Controllers\\NotificationController.cs",
+              "ToolTip": "F:\\.Net\\GameSep\\Course_Project\\App\\Controllers\\NotificationController.cs",
+              "RelativeToolTip": "App\\Controllers\\NotificationController.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAIwCcAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-20T04:10:45.909Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "AdminController.cs",
+              "DocumentMoniker": "F:\\.Net\\GameSep\\Course_Project\\App\\Controllers\\AdminController.cs",
+              "RelativeDocumentMoniker": "App\\Controllers\\AdminController.cs",
+              "ToolTip": "F:\\.Net\\GameSep\\Course_Project\\App\\Controllers\\AdminController.cs",
+              "RelativeToolTip": "App\\Controllers\\AdminController.cs",
+              "ViewState": "AgIAAKQAAAAAAAAAAAAAABAAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-19T19:36:05.517Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
               "Title": "GameRepository.cs",
               "DocumentMoniker": "F:\\.Net\\GameSep\\Course_Project\\Game.DAL\\Repos\\GameRepository.cs",
               "RelativeDocumentMoniker": "Game.DAL\\Repos\\GameRepository.cs",
@@ -263,31 +557,57 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "AdminController.cs",
-              "DocumentMoniker": "F:\\.Net\\GameSep\\Course_Project\\App\\Controllers\\AdminController.cs",
-              "RelativeDocumentMoniker": "App\\Controllers\\AdminController.cs",
-              "ToolTip": "F:\\.Net\\GameSep\\Course_Project\\App\\Controllers\\AdminController.cs",
-              "RelativeToolTip": "App\\Controllers\\AdminController.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABAAAAAJAAAAAAAAAA==",
+              "DocumentIndex": 30,
+              "Title": "User.cs",
+              "DocumentMoniker": "F:\\.Net\\GameSep\\Course_Project\\Game.DAL\\EF\\Tables\\User.cs",
+              "RelativeDocumentMoniker": "Game.DAL\\EF\\Tables\\User.cs",
+              "ToolTip": "F:\\.Net\\GameSep\\Course_Project\\Game.DAL\\EF\\Tables\\User.cs",
+              "RelativeToolTip": "Game.DAL\\EF\\Tables\\User.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAYwBIAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-19T19:36:05.517Z"
+              "WhenOpened": "2026-05-18T07:16:09.73Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "UserRegisterDTO.cs",
-              "DocumentMoniker": "F:\\.Net\\GameSep\\Course_Project\\Game.BLL\\DTOs\\UserRegisterDTO.cs",
-              "RelativeDocumentMoniker": "Game.BLL\\DTOs\\UserRegisterDTO.cs",
-              "ToolTip": "F:\\.Net\\GameSep\\Course_Project\\Game.BLL\\DTOs\\UserRegisterDTO.cs",
-              "RelativeToolTip": "Game.BLL\\DTOs\\UserRegisterDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
+              "DocumentIndex": 27,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "F:\\.Net\\GameSep\\Course_Project\\App\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "App\\Controllers\\AuthController.cs",
+              "ToolTip": "F:\\.Net\\GameSep\\Course_Project\\App\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "App\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-18T08:09:25.86Z"
+              "WhenOpened": "2026-05-18T17:28:10.479Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 26,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "F:\\.Net\\GameSep\\Course_Project\\App\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "App\\Controllers\\HomeController.cs",
+              "ToolTip": "F:\\.Net\\GameSep\\Course_Project\\App\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "App\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAqwC0AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-18T09:44:54.029Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "F:\\.Net\\GameSep\\Course_Project\\Game.BLL\\Services\\AuthService.cs",
+              "RelativeDocumentMoniker": "Game.BLL\\Services\\AuthService.cs",
+              "ToolTip": "F:\\.Net\\GameSep\\Course_Project\\Game.BLL\\Services\\AuthService.cs",
+              "RelativeToolTip": "Game.BLL\\Services\\AuthService.cs",
+              "ViewState": "AgIAADUAAAAAAAAAAAAiwEMAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-18T17:12:36.573Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
               "Title": "GameSpdbContext.cs",
               "DocumentMoniker": "F:\\.Net\\GameSep\\Course_Project\\Game.DAL\\EF\\GameSpdbContext.cs",
               "RelativeDocumentMoniker": "Game.DAL\\EF\\GameSpdbContext.cs",
@@ -299,163 +619,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Program.cs",
-              "DocumentMoniker": "F:\\.Net\\GameSep\\Course_Project\\App\\Program.cs",
-              "RelativeDocumentMoniker": "App\\Program.cs",
-              "ToolTip": "F:\\.Net\\GameSep\\Course_Project\\App\\Program.cs",
-              "RelativeToolTip": "App\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-18T11:43:22.018Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "GameCreateDTO.cs",
-              "DocumentMoniker": "F:\\.Net\\GameSep\\Course_Project\\Game.BLL\\DTOs\\GameCreateDTO.cs",
-              "RelativeDocumentMoniker": "Game.BLL\\DTOs\\GameCreateDTO.cs",
-              "ToolTip": "F:\\.Net\\GameSep\\Course_Project\\Game.BLL\\DTOs\\GameCreateDTO.cs",
-              "RelativeToolTip": "Game.BLL\\DTOs\\GameCreateDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-18T08:06:27.222Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Users.cshtml",
-              "DocumentMoniker": "F:\\.Net\\GameSep\\Course_Project\\App\\Views\\Admin\\Users.cshtml",
-              "RelativeDocumentMoniker": "App\\Views\\Admin\\Users.cshtml",
-              "ToolTip": "F:\\.Net\\GameSep\\Course_Project\\App\\Views\\Admin\\Users.cshtml",
-              "RelativeToolTip": "App\\Views\\Admin\\Users.cshtml",
-              "ViewState": "AgIAAB4BAAAAAAAAAAAAwDABAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-05-19T20:01:58.776Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "F:\\.Net\\GameSep\\Course_Project\\App\\Views\\Admin\\Index.cshtml",
-              "RelativeDocumentMoniker": "App\\Views\\Admin\\Index.cshtml",
-              "ToolTip": "F:\\.Net\\GameSep\\Course_Project\\App\\Views\\Admin\\Index.cshtml",
-              "RelativeToolTip": "App\\Views\\Admin\\Index.cshtml",
-              "ViewState": "AgIAAOIAAAAAAAAAAAAAwPQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-05-19T20:01:27.6Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "Games.cshtml",
-              "DocumentMoniker": "F:\\.Net\\GameSep\\Course_Project\\App\\Views\\Admin\\Games.cshtml",
-              "RelativeDocumentMoniker": "App\\Views\\Admin\\Games.cshtml",
-              "ToolTip": "F:\\.Net\\GameSep\\Course_Project\\App\\Views\\Admin\\Games.cshtml",
-              "RelativeToolTip": "App\\Views\\Admin\\Games.cshtml",
-              "ViewState": "AgIAAAABAAAAAAAAAAAAwBIBAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-05-19T20:01:05.968Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "EditGame.cshtml",
-              "DocumentMoniker": "F:\\.Net\\GameSep\\Course_Project\\App\\Views\\Admin\\EditGame.cshtml",
-              "RelativeDocumentMoniker": "App\\Views\\Admin\\EditGame.cshtml",
-              "ToolTip": "F:\\.Net\\GameSep\\Course_Project\\App\\Views\\Admin\\EditGame.cshtml",
-              "RelativeToolTip": "App\\Views\\Admin\\EditGame.cshtml",
-              "ViewState": "AgIAAMAAAAAAAAAAAAAAwMIAAABuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-05-19T19:58:34.228Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "AddGame.cshtml",
-              "DocumentMoniker": "F:\\.Net\\GameSep\\Course_Project\\App\\Views\\Admin\\AddGame.cshtml",
-              "RelativeDocumentMoniker": "App\\Views\\Admin\\AddGame.cshtml",
-              "ToolTip": "F:\\.Net\\GameSep\\Course_Project\\App\\Views\\Admin\\AddGame.cshtml",
-              "RelativeToolTip": "App\\Views\\Admin\\AddGame.cshtml",
-              "ViewState": "AgIAANEAAAAAAAAAAAAAwK4AAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-05-19T19:54:22.063Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "F:\\.Net\\GameSep\\Course_Project\\App\\Controllers\\AuthController.cs",
-              "RelativeDocumentMoniker": "App\\Controllers\\AuthController.cs",
-              "ToolTip": "F:\\.Net\\GameSep\\Course_Project\\App\\Controllers\\AuthController.cs",
-              "RelativeToolTip": "App\\Controllers\\AuthController.cs",
-              "ViewState": "AgIAADIAAAAAAAAAAAAuwCUAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-18T17:28:10.479Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "F:\\.Net\\GameSep\\Course_Project\\App\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "App\\Views\\Home\\Index.cshtml",
-              "ToolTip": "F:\\.Net\\GameSep\\Course_Project\\App\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "App\\Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAADIAAAAAAAAAAAAUwE0AAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-05-18T10:08:32.334Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "Register.cshtml",
-              "DocumentMoniker": "F:\\.Net\\GameSep\\Course_Project\\App\\Views\\Auth\\Register.cshtml",
-              "RelativeDocumentMoniker": "App\\Views\\Auth\\Register.cshtml",
-              "ToolTip": "F:\\.Net\\GameSep\\Course_Project\\App\\Views\\Auth\\Register.cshtml",
-              "RelativeToolTip": "App\\Views\\Auth\\Register.cshtml",
-              "ViewState": "AgIAACsAAAAAAAAAAAAqwDEAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-05-18T17:45:10.129Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "UserController.cs",
-              "DocumentMoniker": "F:\\.Net\\GameSep\\Course_Project\\App\\Controllers\\UserController.cs",
-              "RelativeDocumentMoniker": "App\\Controllers\\UserController.cs",
-              "ToolTip": "F:\\.Net\\GameSep\\Course_Project\\App\\Controllers\\UserController.cs",
-              "RelativeToolTip": "App\\Controllers\\UserController.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAQwBUAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-18T18:09:00.219Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "Login.cshtml",
-              "DocumentMoniker": "F:\\.Net\\GameSep\\Course_Project\\App\\Views\\Auth\\Login.cshtml",
-              "RelativeDocumentMoniker": "App\\Views\\Auth\\Login.cshtml",
-              "ToolTip": "F:\\.Net\\GameSep\\Course_Project\\App\\Views\\Auth\\Login.cshtml",
-              "RelativeToolTip": "App\\Views\\Auth\\Login.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-05-18T17:41:35.543Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "LoginDTO.cs",
-              "DocumentMoniker": "F:\\.Net\\GameSep\\Course_Project\\Game.BLL\\DTOs\\LoginDTO.cs",
-              "RelativeDocumentMoniker": "Game.BLL\\DTOs\\LoginDTO.cs",
-              "ToolTip": "F:\\.Net\\GameSep\\Course_Project\\Game.BLL\\DTOs\\LoginDTO.cs",
-              "RelativeToolTip": "Game.BLL\\DTOs\\LoginDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-18T17:09:21.239Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 33,
               "Title": "Game.BLL.csproj",
               "DocumentMoniker": "F:\\.Net\\GameSep\\Course_Project\\Game.BLL\\Game.BLL.csproj",
               "RelativeDocumentMoniker": "Game.BLL\\Game.BLL.csproj",
@@ -467,19 +631,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "LibraryViewDTO.cs",
-              "DocumentMoniker": "F:\\.Net\\GameSep\\Course_Project\\Game.BLL\\DTOs\\LibraryViewDTO.cs",
-              "RelativeDocumentMoniker": "Game.BLL\\DTOs\\LibraryViewDTO.cs",
-              "ToolTip": "F:\\.Net\\GameSep\\Course_Project\\Game.BLL\\DTOs\\LibraryViewDTO.cs",
-              "RelativeToolTip": "Game.BLL\\DTOs\\LibraryViewDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-18T08:10:44.592Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 34,
               "Title": "Game.cs",
               "DocumentMoniker": "F:\\.Net\\GameSep\\Course_Project\\Game.DAL\\EF\\Tables\\Game.cs",
               "RelativeDocumentMoniker": "Game.DAL\\EF\\Tables\\Game.cs",
@@ -491,7 +643,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 35,
               "Title": "Library.cs",
               "DocumentMoniker": "F:\\.Net\\GameSep\\Course_Project\\Game.DAL\\EF\\Tables\\Library.cs",
               "RelativeDocumentMoniker": "Game.DAL\\EF\\Tables\\Library.cs",
@@ -503,7 +655,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 36,
               "Title": "Order.cs",
               "DocumentMoniker": "F:\\.Net\\GameSep\\Course_Project\\Game.DAL\\EF\\Tables\\Order.cs",
               "RelativeDocumentMoniker": "Game.DAL\\EF\\Tables\\Order.cs",
@@ -515,7 +667,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 37,
               "Title": "Game.DAL.csproj",
               "DocumentMoniker": "F:\\.Net\\GameSep\\Course_Project\\Game.DAL\\Game.DAL.csproj",
               "RelativeDocumentMoniker": "Game.DAL\\Game.DAL.csproj",
@@ -527,55 +679,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "ViewOrdersDTO.cs",
-              "DocumentMoniker": "F:\\.Net\\GameSep\\Course_Project\\Game.BLL\\DTOs\\ViewOrdersDTO.cs",
-              "RelativeDocumentMoniker": "Game.BLL\\DTOs\\ViewOrdersDTO.cs",
-              "ToolTip": "F:\\.Net\\GameSep\\Course_Project\\Game.BLL\\DTOs\\ViewOrdersDTO.cs",
-              "RelativeToolTip": "Game.BLL\\DTOs\\ViewOrdersDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-18T08:15:56.538Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "OrdersDTO.cs",
-              "DocumentMoniker": "F:\\.Net\\GameSep\\Course_Project\\Game.BLL\\DTOs\\OrdersDTO.cs",
-              "RelativeDocumentMoniker": "Game.BLL\\DTOs\\OrdersDTO.cs",
-              "ToolTip": "F:\\.Net\\GameSep\\Course_Project\\Game.BLL\\DTOs\\OrdersDTO.cs",
-              "RelativeToolTip": "Game.BLL\\DTOs\\OrdersDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-18T08:14:40.059Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "GameDTO.cs",
-              "DocumentMoniker": "F:\\.Net\\GameSep\\Course_Project\\Game.BLL\\DTOs\\GameDTO.cs",
-              "RelativeDocumentMoniker": "Game.BLL\\DTOs\\GameDTO.cs",
-              "ToolTip": "F:\\.Net\\GameSep\\Course_Project\\Game.BLL\\DTOs\\GameDTO.cs",
-              "RelativeToolTip": "Game.BLL\\DTOs\\GameDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-18T08:02:09.418Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "F:\\.Net\\GameSep\\Course_Project\\App\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "App\\Controllers\\HomeController.cs",
-              "ToolTip": "F:\\.Net\\GameSep\\Course_Project\\App\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "App\\Controllers\\HomeController.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAwwBkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-18T09:44:54.029Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 38,
               "Title": "App.csproj",
               "DocumentMoniker": "F:\\.Net\\GameSep\\Course_Project\\App\\App.csproj",
               "RelativeDocumentMoniker": "App\\App.csproj",
@@ -587,19 +691,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "F:\\.Net\\GameSep\\Course_Project\\App\\appsettings.json",
-              "RelativeDocumentMoniker": "App\\appsettings.json",
-              "ToolTip": "F:\\.Net\\GameSep\\Course_Project\\App\\appsettings.json",
-              "RelativeToolTip": "App\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABCAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-05-18T08:17:25.589Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 39,
               "Title": "Class1.cs",
               "DocumentMoniker": "F:\\.Net\\GameSep\\Course_Project\\Game.DAL\\Class1.cs",
               "RelativeDocumentMoniker": "Game.DAL\\Class1.cs",
@@ -611,7 +703,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 40,
               "Title": "Class1.cs",
               "DocumentMoniker": "F:\\.Net\\GameSep\\Course_Project\\Game.BLL\\Class1.cs",
               "RelativeDocumentMoniker": "Game.BLL\\Class1.cs",

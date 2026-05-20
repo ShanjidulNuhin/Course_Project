@@ -19,7 +19,6 @@ var app = builder.Build();
 using (var scope = app.Services.CreateScope())
 {
     var db = scope.ServiceProvider.GetRequiredService<Game.DAL.EF.GameSpdbContext>();
-    Game.DAL.EF.DbInitializer.Initialize(db);
 }
 
 if (!app.Environment.IsDevelopment())
@@ -39,6 +38,4 @@ app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}")
     .WithStaticAssets();
-
-
 app.Run();

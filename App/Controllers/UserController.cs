@@ -18,7 +18,6 @@ namespace App.Controllers
             _userRepo = userRepo;
             _gameService = gameService;
         }
-
         public IActionResult Index()
         {
             var token = Request.Cookies["AuthToken"];
@@ -79,22 +78,18 @@ namespace App.Controllers
                 TempData["Error"] = "Name and Email are required.";
                 return RedirectToAction("Profile");
             }
-
-            // Check if another user has this email
             var emailUser = _userRepo.GetByEmail(email);
             if (emailUser != null && emailUser.Id != user.Id)
             {
                 TempData["Error"] = "Email is already in use by another user.";
                 return RedirectToAction("Profile");
             }
-
             user.Name = name;
             user.Email = email;
             if (!string.IsNullOrEmpty(newPassword))
             {
                 user.Password = newPassword;
             }
-
             _userRepo.Update(user);
             TempData["Success"] = "Profile updated successfully!";
             return RedirectToAction("Profile");
@@ -126,7 +121,6 @@ namespace App.Controllers
             TempData["Success"] = "Account deleted successfully.";
             return RedirectToAction("Index", "Home");
         }
-
         public IActionResult Library()
         {
             var token = Request.Cookies["AuthToken"];

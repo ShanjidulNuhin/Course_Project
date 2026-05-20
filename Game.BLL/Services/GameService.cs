@@ -23,7 +23,6 @@ namespace Game.BLL.Services
             _db = db;
             _notificationService = notificationService;
         }
-
         public List<GameDTO> GetGamesForLandingPage()
         {
             var gamesFromDb = _gameRepo.Get();
@@ -40,7 +39,6 @@ namespace Game.BLL.Services
 
             return gameList;
         }
-
         public GameDTO? GetGameById(int id)
         {
             var g = _gameRepo.Get(id);
@@ -55,7 +53,6 @@ namespace Game.BLL.Services
                 Price = g.Price
             };
         }
-
         public List<LibraryViewDTO> GetUserLibrary(string token)
         {
             var user = _userRepo.GetByToken(token);
@@ -63,7 +60,6 @@ namespace Game.BLL.Services
             {
                 return new List<LibraryViewDTO>();
             }
-
             var libraryItems = _db.Libraries
                 .Where(l => l.UserId == user.Id)
                 .Select(l => new LibraryViewDTO
@@ -83,7 +79,6 @@ namespace Game.BLL.Services
 
             return libraryItems;
         }
-
         public bool PurchaseGame(string token, int gameId, out string errorMessage)
         {
             errorMessage = "";
@@ -93,22 +88,18 @@ namespace Game.BLL.Services
                 errorMessage = "User not found or session expired. Please log in.";
                 return false;
             }
-
             var game = _gameRepo.Get(gameId);
             if (game == null)
             {
                 errorMessage = "Game not found.";
                 return false;
             }
-
-            // Check if user already owns this game
             var alreadyOwned = _db.Libraries.Any(l => l.UserId == user.Id && l.GameId == game.Id && l.Cart_Type == "Purchased");
             if (alreadyOwned)
             {
                 errorMessage = "You already own this game!";
                 return false;
             }
-
             var price = game.Price;
             var balance = user.Blance ?? 0;
             if (balance < price)
@@ -116,12 +107,8 @@ namespace Game.BLL.Services
                 errorMessage = $"Insufficient balance. The game costs ${price:N2}, but your balance is ${balance:N2}. Please add balance.";
                 return false;
             }
-
-            // Deduct balance
             user.Blance = balance - price;
             _userRepo.Update(user);
-
-            // Add to library
             var libraryRecord = new Game.DAL.EF.Tables.Library
             {
                 UserId = user.Id,
@@ -130,8 +117,6 @@ namespace Game.BLL.Services
                 OrderDate = DateOnly.FromDateTime(DateTime.Now)
             };
             _db.Libraries.Add(libraryRecord);
-
-            // Add order
             var orderRecord = new Game.DAL.EF.Tables.Order
             {
                 UserId = user.Id,
@@ -139,15 +124,11 @@ namespace Game.BLL.Services
                 TotalPrice = price
             };
             _db.Orders.Add(orderRecord);
-
             _db.SaveChanges();
-
-            // Notify all admins of the game purchase
             _notificationService.CreateNotification($"💰 Customer '{user.Name}' purchased game '{game.Title}'!", "Admin", null);
 
             return true;
         }
-
         public bool WishlistGame(string token, int gameId, out string errorMessage)
         {
             errorMessage = "";
@@ -164,16 +145,12 @@ namespace Game.BLL.Services
                 errorMessage = "Game not found.";
                 return false;
             }
-
-            // Check if user already has this game in wishlist
             var alreadyWishlisted = _db.Libraries.Any(l => l.UserId == user.Id && l.GameId == game.Id && l.Cart_Type == "Wishlist");
             if (alreadyWishlisted)
             {
                 errorMessage = "This game is already in your wishlist!";
                 return false;
             }
-
-            // Add to wishlist
             var libraryRecord = new Game.DAL.EF.Tables.Library
             {
                 UserId = user.Id,
@@ -185,7 +162,6 @@ namespace Game.BLL.Services
             _db.SaveChanges();
             return true;
         }
-
         public bool RemoveFromWishlist(string token, int gameId, out string errorMessage)
         {
             errorMessage = "";
@@ -195,14 +171,12 @@ namespace Game.BLL.Services
                 errorMessage = "User not found or session expired. Please log in.";
                 return false;
             }
-
             var wishlistRecord = _db.Libraries.FirstOrDefault(l => l.UserId == user.Id && l.GameId == gameId && l.Cart_Type == "Wishlist");
             if (wishlistRecord == null)
             {
                 errorMessage = "Game not found in your wishlist.";
                 return false;
             }
-
             _db.Libraries.Remove(wishlistRecord);
             _db.SaveChanges();
             return true;

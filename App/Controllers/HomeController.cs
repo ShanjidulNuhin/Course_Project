@@ -17,7 +17,6 @@ namespace App.Controllers
             _gameService = gameService;
             _userRepo = userRepo;
         }
-
         public IActionResult Index()
         {
             var token = Request.Cookies["AuthToken"];
@@ -29,11 +28,9 @@ namespace App.Controllers
                     return RedirectToAction("Index", "User");
                 }
             }
-
             var games = _gameService.GetGamesForLandingPage();
             return View(games);
         }
-
         public IActionResult Details(int id)
         {
             var game = _gameService.GetGameById(id);
@@ -43,12 +40,10 @@ namespace App.Controllers
             }
             return View(game);
         }
-
         public IActionResult Privacy()
         {
             return View();
         }
-
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

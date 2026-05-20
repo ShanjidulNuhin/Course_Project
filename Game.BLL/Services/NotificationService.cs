@@ -18,7 +18,6 @@ namespace Game.BLL.Services
             _db = db;
             _userRepo = userRepo;
         }
-
         public List<NotificationDTO> GetNotificationsForUser(string token)
         {
             var user = _userRepo.GetByToken(token);
@@ -36,7 +35,6 @@ namespace Game.BLL.Services
                 .Where(r => r.UserId == userId && r.IsRead)
                 .Select(r => r.NotificationId)
                 .ToHashSet();
-
             return notifications.Select(n => new NotificationDTO
             {
                 Id = n.Id,
@@ -45,20 +43,16 @@ namespace Game.BLL.Services
                 IsRead = readNotificationIds.Contains(n.Id)
             }).ToList();
         }
-
         public int GetUnreadCount(string token)
         {
             var user = _userRepo.GetByToken(token);
             if (user == null) return 0;
-
             var role = user.Role ?? "Customer";
             var userId = user.Id;
-
             var totalNotificationIds = _db.Notifications
                 .Where(n => n.TargetRole == role || n.TargetUserId == userId)
                 .Select(n => n.Id)
-                .ToList();
-
+               .ToList();
             var readNotificationIds = _db.NotificationReadStates
                 .Where(r => r.UserId == userId && r.IsRead && totalNotificationIds.Contains(r.NotificationId))
                 .Select(r => r.NotificationId)
@@ -66,34 +60,26 @@ namespace Game.BLL.Services
 
             return totalNotificationIds.Count - readNotificationIds.Count;
         }
-
         public bool MarkAllAsRead(string token)
         {
             var user = _userRepo.GetByToken(token);
             if (user == null) return false;
-
             var role = user.Role ?? "Customer";
             var userId = user.Id;
-
             var eligibleNotificationIds = _db.Notifications
                 .Where(n => n.TargetRole == role || n.TargetUserId == userId)
                 .Select(n => n.Id)
                 .ToList();
-
             var alreadyReadIds = _db.NotificationReadStates
                 .Where(r => r.UserId == userId && r.IsRead)
                 .Select(r => r.NotificationId)
                 .ToList();
-
             var unreadIds = eligibleNotificationIds.Except(alreadyReadIds).ToList();
-
             if (!unreadIds.Any()) return true;
-
             foreach (var notificationId in unreadIds)
             {
                 var readState = _db.NotificationReadStates
                     .FirstOrDefault(r => r.UserId == userId && r.NotificationId == notificationId);
-
                 if (readState == null)
                 {
                     _db.NotificationReadStates.Add(new NotificationReadState
@@ -108,10 +94,8 @@ namespace Game.BLL.Services
                     readState.IsRead = true;
                 }
             }
-
             return _db.SaveChanges() > 0;
         }
-
         public bool CreateNotification(string message, string? targetRole, int? targetUserId)
         {
             var notification = new Notification
