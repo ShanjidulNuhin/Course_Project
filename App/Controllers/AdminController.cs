@@ -23,7 +23,9 @@ namespace App.Controllers
         public IActionResult Index()
         {
             if (!IsAdmin())
+            {
                 return RedirectToAction("Login", "Auth");
+            }
             var games = _adminService.GetAllGames();
             var users = _adminService.GetAllUsers();
             ViewBag.GamesCount = games.Count;
@@ -42,7 +44,9 @@ namespace App.Controllers
         public IActionResult Games()
         {
             if (!IsAdmin())
+            {
                 return RedirectToAction("Login", "Auth");
+            }
             var games = _adminService.GetAllGames();
             return View(games);
         }
@@ -50,7 +54,9 @@ namespace App.Controllers
         public IActionResult AddGame()
         {
             if (!IsAdmin())
+            {
                 return RedirectToAction("Login", "Auth");
+            }
 
             return View();
         }
@@ -58,12 +64,14 @@ namespace App.Controllers
         public IActionResult AddGame(GameCreateDTO dto, IFormFile? CoverFile)
         {
             if (!IsAdmin())
+            {
                 return RedirectToAction("Login", "Auth");
+            }
             if (CoverFile != null && CoverFile.Length > 0)
             {
-                using var ms = new System.IO.MemoryStream();
-                CoverFile.CopyTo(ms);
-                dto.Cover = ms.ToArray();
+                using var stream = CoverFile.OpenReadStream();
+                using var br = new BinaryReader(stream);
+                dto.Cover = br.ReadBytes((int)CoverFile.Length);
             }
             if (string.IsNullOrWhiteSpace(dto.Title) || string.IsNullOrWhiteSpace(dto.Genre))
             {
@@ -93,15 +101,16 @@ namespace App.Controllers
             return View(game);
         }
         [HttpPost]
-        public IActionResult EditGame(GameDTO dto, IFormFile? CoverFile)
+        public IActionResult EditGame(GameDTO dto, IFormFile CoverFile)
         {
             if (!IsAdmin())
                 return RedirectToAction("Login", "Auth");
             if (CoverFile != null && CoverFile.Length > 0)
             {
-                using var ms = new System.IO.MemoryStream();
-                CoverFile.CopyTo(ms);
-                dto.Cover = ms.ToArray();
+                using var stream = CoverFile.OpenReadStream();
+                using var br = new BinaryReader(stream);
+
+                dto.Cover = br.ReadBytes((int)CoverFile.Length);
             }
             else
             {
